@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Tale
+  - Body
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - SnakeHead
+  - SnakeBody
+  - "\u0421onnectable"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Floor
+    uniqueID: 3379232607
+    locked: 0
+  - name: Wire
+    uniqueID: 626441453
+    locked: 0
+  - name: Electron
+    uniqueID: 2908657245
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Snake
+    uniqueID: 2077193583
+    locked: 0
+  - name: Above
+    uniqueID: 3876731973
+    locked: 0
