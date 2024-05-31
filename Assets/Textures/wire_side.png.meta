@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 65a36a5ee1a7cbe4dafb62b8805364b6
+guid: ed116b22fb6461844b309e3f0de6e049
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -215092060816077791
-    second: switch_3_0
+      213: 2718208183002851583
+    second: wire_side_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: switch_3_0
+      name: wire_side_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 406
-        height: 359
+        width: 433
+        height: 174
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12c0d0909e6d30df0800000000000000
-      internalID: -215092060816077791
+      spriteID: ff8e175d0f309b520800000000000000
+      internalID: 2718208183002851583
       vertices: []
       indices: 
       edges: []

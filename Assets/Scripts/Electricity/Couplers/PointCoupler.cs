@@ -16,7 +16,7 @@ namespace Electricity.Couplers
         
         [SerializeField, HideInInspector] private PointElectronPool electronPool;
         
-        private Transform[] _points;
+        private Transform[] _points; 
         private Transform[] _pointsReverse;
         private readonly List<PointElectron> _activeElectrons = new();
             

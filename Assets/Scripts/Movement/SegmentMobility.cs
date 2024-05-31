@@ -13,45 +13,46 @@ namespace Movement
 
         public bool CanNotMove { get; set; }
         
-        private Rigidbody2D _body;
+        protected Rigidbody2D _body;
 
-        private Vector3 _direction;
+        private Vector2 _direction;
        
-        private bool _isMoving;
+        protected bool _isMoving;
         private float _speed;
         
-        private void Awake()
+        protected virtual void Awake()
         {
             _body = GetComponent<Rigidbody2D>();
         }
         
         public void MoveBy(Vector2 direction)
         {
+            if(CanNotMove)
+                return;
+            
             _isMoving = direction != Vector2.zero;
             if (!_isMoving)
                 return;
 
-            _direction.Set(direction.x, direction.y, 0);
+            _direction.Set(direction.x, direction.y);
         }
 
-        private void FixedUpdate()
+        protected virtual void FixedUpdate()
         {
             if(CanNotMove)
                 return;
             
             ApplyAcceleration();
             
-            if(_direction == Vector3.zero)
-                return;
-            
             if (_isMoving)
                 ApplySin();
 
-            var targetRotation = Quaternion.RotateTowards(transform.rotation
+            var rotation = transform.rotation;
+            var targetRotation = _isMoving ? Quaternion.RotateTowards(rotation
                 , Quaternion.LookRotation(Vector3.forward, Quaternion.Euler(0,0,90) * _direction)
-                , rotationSpeed * Time.deltaTime);    
+                , rotationSpeed * Time.deltaTime) : rotation;    
             
-            _body.MovePosition(transform.position + Time.deltaTime * _speed * _direction);
+            _body.MovePosition(_body.position + Time.deltaTime * _speed * _direction);
             _body.MoveRotation(targetRotation);
         }
 
@@ -70,7 +71,7 @@ namespace Movement
 
         private void ApplySin()
         {
-            _direction += Quaternion.LookRotation(Vector3.forward,_direction) * Vector3.right * (Mathf.Sin(Time.time * amplitude) * magnitude);
+            _direction += (Vector2) transform.up * (Mathf.Sin(Time.time * amplitude) * magnitude);
         }
     }
 }

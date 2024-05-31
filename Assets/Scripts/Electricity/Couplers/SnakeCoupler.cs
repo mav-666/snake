@@ -30,13 +30,14 @@ namespace Electricity.Couplers
 
         private void InitPointArray(SegmentController segments)
         {
-            var points = new Transform[segments.AllBody.Length + 1];
+            var points = new Transform[segments.AllBody.Length + 2];
 
             points[0] = segments.Head.transform;
-
+            points[^1] = segments.Tale.transform;
+            
             for (var i = 0; i < segments.AllBody.Length; i++)
-                points[i + 1] = segments.AllBody[i].transform;
-
+                points[i+1] = segments.AllBody[i].transform;
+            
             Init(points);
         }
         
@@ -59,8 +60,9 @@ namespace Electricity.Couplers
         private void MoveAnimationFor(IMobility segment, Rigidbody2D rigid, Electric electric)
         {
             segment.CanNotMove = true;
+            Freeze(rigid);
             rigid.DOMove(electric.transform.position, animationDuration)
-                .OnComplete(() => Freeze(rigid));
+                .OnComplete(() => Freeze(rigid)).SetUpdate(UpdateType.Fixed);
         }
 
         private void Freeze(Rigidbody2D rigid)

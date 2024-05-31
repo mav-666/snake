@@ -32,20 +32,26 @@ namespace Movement
        
         public void MoveBy(Vector2 direction)
         {
-            var isCurrentMoving = direction != Vector2.zero;
-            
-            if (_isMoving && !isCurrentMoving)
-                SetPassiveDrag();
-            else if (!_isMoving && isCurrentMoving)
-                SetActiveDrag();
-            
-            _isMoving = isCurrentMoving;
-                
+            CalcDrag(direction);
+
             if (!_findingCoupler.IsConnectedA)
                 _headMobility.MoveBy(direction);
             else if (!_findingCoupler.IsConnectedB)
                 _taleMobility.MoveBy(direction);
         }
+
+        private void CalcDrag(Vector2 direction)
+        {
+            var isCurrentMoving = direction != Vector2.zero;
+
+            if (_isMoving && !isCurrentMoving)
+                SetPassiveDrag();
+            else if (!_isMoving && isCurrentMoving)
+                SetActiveDrag();
+
+            _isMoving = isCurrentMoving;
+        }
+
 
         private void SetPassiveDrag()
         {
