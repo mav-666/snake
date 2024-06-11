@@ -1,8 +1,9 @@
 ﻿using DG.Tweening;
-using Movement;
+using Electricity;
+using Electricity.Couplers;
 using UnityEngine;
 
-namespace Electricity.Couplers
+namespace Snake
 {
     [RequireComponent(typeof(SegmentController))]
     public class SnakeCoupler : PointCoupler

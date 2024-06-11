@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-namespace Movement
+namespace Snake
 {
     public interface IMobility
     {
         GameObject gameObject { get; }
 
-        public bool CanNotMove { set; }
-
+        public bool CanNotMove { get; set; }
+        
         public void MoveBy(Vector2 direction);
     }
 }

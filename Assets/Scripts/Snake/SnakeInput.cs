@@ -2,7 +2,7 @@ using Electricity.Couplers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Movement
+namespace Snake
 {
     public class SnakeInput : MonoBehaviour
     {
@@ -12,6 +12,8 @@ namespace Movement
         private FindingCoupler _snakeConnection;
         
         private InputAction _move;
+        private InputAction _connect;
+        private InputAction _disconnect;
         private InputActionMap _playerMap;
         
         private void Awake()
@@ -20,15 +22,21 @@ namespace Movement
 
             _move = _playerMap.FindAction("Move");
             
-            var connect = _playerMap.FindAction("Connect");
-            connect.performed += ctx =>
-            {
-                if (ctx.interaction == null)
-                    _snakeConnection.FindUnconnected();
-            };
-
-            var disconnect = _playerMap.FindAction("Disconnect");
-            disconnect.performed += _ => _snakeConnection.BreakConnected();
+            _connect = _playerMap.FindAction("Connect");
+            _disconnect = _playerMap.FindAction("Disconnect");
+  
+            _connect.performed += Connect;
+            _disconnect.performed += Disconnect;
+        }
+        
+        private void Connect(InputAction.CallbackContext ctx)
+        {
+            if (ctx.interaction == null) _snakeConnection.FindUnconnected();
+        }
+        
+        private void Disconnect(InputAction.CallbackContext _)
+        {
+            _snakeConnection.BreakConnected();
         }
 
         private void Start()
@@ -45,11 +53,18 @@ namespace Movement
         public void OnEnable()
         {
             _playerMap.Enable();
+           
         }
 
-        public void OnDisable()
+        private void OnDisable()
         {
             _playerMap.Disable();
+        }
+
+        public void OnDestroy()
+        {
+            _connect.performed -= Connect;
+            _disconnect.performed -= Disconnect;
         }
     }
 }

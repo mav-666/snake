@@ -1,7 +1,7 @@
 ﻿using Electricity.Couplers;
 using UnityEngine;
 
-namespace Movement
+namespace Snake
 {
     public class SnakeAdapter : MonoBehaviour, IMobility
     {
@@ -33,10 +33,13 @@ namespace Movement
         public void MoveBy(Vector2 direction)
         {
             CalcDrag(direction);
-
-            if (!_findingCoupler.IsConnectedA)
+            
+            _headMobility.CanNotMove =  CanNotMove || _findingCoupler.IsConnectedA;
+            _taleMobility.CanNotMove = CanNotMove || _findingCoupler.IsConnectedB;
+            
+            if (!_headMobility.CanNotMove)
                 _headMobility.MoveBy(direction);
-            else if (!_findingCoupler.IsConnectedB)
+            else if (!_taleMobility.CanNotMove)
                 _taleMobility.MoveBy(direction);
         }
 

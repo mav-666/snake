@@ -1,27 +1,23 @@
-﻿using System;
+﻿using Parasite;
 using UnityEngine;
 
 namespace Electricity.Couplers
 {
+    [RequireComponent(typeof(ConeSensor))]
     public class NearestFinder : Finder
     {
-        [SerializeField] private float distance;
-        [SerializeField] private LayerMask layerMask;
+        private ConeSensor _sensor;
 
-        private void OnDrawGizmos()
+        private void Awake()
         {
-            Gizmos.color = Color.red;
-            
-            Gizmos.DrawRay(transform.position, transform.right * distance * transform.lossyScale.x);
+            _sensor = GetComponent<ConeSensor>();
         }
-
+        
         public override bool Find(out Electric found)
         {
-            var trans = transform;
-            var hit = Physics2D.Raycast(trans.position, trans.right, distance * trans.lossyScale.x, layerMask);
-
-            var hasFound = hit.collider != null;
-            found = hasFound ? hit.collider.GetComponent<Electric>() : null;
+            var hasFound = _sensor.Check(out var target);
+            
+            found = hasFound ? target.GetComponent<Electric>() : null;
             
             return hasFound;
         }

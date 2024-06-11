@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 7561543742417226211}
   - component: {fileID: 4873873638217355477}
   - component: {fileID: 5877540357801994320}
+  - component: {fileID: 7228057322288537476}
   m_Layer: 6
   m_Name: tale
   m_TagString: Tale
@@ -241,10 +242,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53266fcffa564be6b124643ecbde70be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 0.8
-  layerMask:
+--- !u!114 &7228057322288537476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952080697953701254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fff0a27825a47e9b9f2afc8ce1ccef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  observeAngle: 0
+  radius: 0
+  targetLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &5731266148992050711
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +275,7 @@ GameObject:
   - component: {fileID: 260220940106425501}
   - component: {fileID: 6916230531566361779}
   - component: {fileID: 3650690356616715469}
+  - component: {fileID: 7144945362775187361}
   m_Layer: 6
   m_Name: head
   m_TagString: Untagged
@@ -374,10 +392,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53266fcffa564be6b124643ecbde70be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 3.25
-  layerMask:
+--- !u!114 &7144945362775187361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5731266148992050711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fff0a27825a47e9b9f2afc8ce1ccef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  observeAngle: 0
+  radius: 0
+  targetLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &7635251140646446600
 GameObject:
   m_ObjectHideFlags: 0

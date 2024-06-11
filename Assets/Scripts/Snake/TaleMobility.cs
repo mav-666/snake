@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Movement
+namespace Snake
 {
     public class TaleMobility : SegmentMobility
     {

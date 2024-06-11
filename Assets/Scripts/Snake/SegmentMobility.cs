@@ -1,24 +1,37 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Movement
+namespace Snake
 {
     public class SegmentMobility : MonoBehaviour, IMobility
     {
-        [SerializeField] private float maxSpeed;
+        public float maxSpeed; 
+        
         [SerializeField] private float acceleration;
         [SerializeField] private float magnitude;
         [SerializeField] private float amplitude;
         [SerializeField] private float rotationSpeed;
 
-        public bool CanNotMove { get; set; }
-        
+        private bool _canNotMove;
+        public bool CanNotMove
+        {
+            get => _canNotMove;
+            set
+            {
+                _canNotMove = value;
+                _isMoving = false;
+                _direction = Vector2.zero;
+            }
+        }
+
         protected Rigidbody2D _body;
 
         private Vector2 _direction;
        
         protected bool _isMoving;
+        
         private float _speed;
+       
         
         protected virtual void Awake()
         {
@@ -27,10 +40,7 @@ namespace Movement
         
         public void MoveBy(Vector2 direction)
         {
-            if(CanNotMove)
-                return;
-            
-            _isMoving = direction != Vector2.zero;
+            _isMoving = direction != Vector2.zero || CanNotMove;
             if (!_isMoving)
                 return;
 
@@ -39,9 +49,6 @@ namespace Movement
 
         protected virtual void FixedUpdate()
         {
-            if(CanNotMove)
-                return;
-            
             ApplyAcceleration();
             
             if (_isMoving)
@@ -60,8 +67,7 @@ namespace Movement
         {
             if (_isMoving)
             {
-                _speed += acceleration;
-                _speed = Math.Min(_speed, maxSpeed);
+                _speed += maxSpeed > _speed ? acceleration : -acceleration;
                 return;
             }
             

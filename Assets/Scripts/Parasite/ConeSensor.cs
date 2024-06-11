@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Parasite
 {
-    public class FlashlightSensor : MonoBehaviour
+    public class ConeSensor : MonoBehaviour
     {
-        [SerializeField, Range(0, 180)] private float observeAngle;
+        [SerializeField, Range(0, 360)] private float observeAngle;
         [SerializeField] private float radius;
 
         [SerializeField] private LayerMask targetLayers;
@@ -15,8 +14,6 @@ namespace Parasite
         public float ObserveAngle => observeAngle;
         public float Radius => radius;
 
-        public event Action<Transform> OnFind; 
-        
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.red;
@@ -30,27 +27,31 @@ namespace Parasite
             Gizmos.DrawRay(position, Quaternion.Euler(0,0, -observeAngle/2f) * right * radius);
         }
         
-        private void Update()
-        {
-            foreach (var hit in FindInCircle())
-                if(hit)
-                    Check(hit.transform);
-        }
-        
         private IEnumerable<RaycastHit2D> FindInCircle()
         {
             return Physics2D.CircleCastAll(transform.position, radius, Vector2.zero, 1f, targetLayers);
         }
 
-        private void Check(Transform target)
+        public bool Check(out GameObject target)
         {
-            if (IsInObserveAngle(target) && HasNoObstacles(target))
+            foreach (var hit in FindInCircle())
             {
-                Debug.Log(target.name + " : " + target.position);
-                OnFind?.Invoke(target);
+                if (!hit || !CheckOne(hit.transform)) 
+                    continue;
+
+                target = hit.collider.gameObject;
+                return true;
             }
-                
+
+            target = null;
+            return false;
         }
+        
+        private bool CheckOne(Transform target)
+        {
+            return IsInObserveAngle(target) && HasNoObstacles(target);
+        }
+        
 
         private bool IsInObserveAngle(Transform target)
         {

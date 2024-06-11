@@ -12,11 +12,13 @@ namespace Electricity
         private void Start()
         {
             _lightColor = light2d.color;
+            light2d.enabled = false;
             light2d.color = Color.clear;    
         }
         
         public void ExecuteOn()
         {
+            light2d.enabled = true;
             DOVirtual.Color(light2d.color, _lightColor, 0.8f,
                 value => light2d.color = value).SetEase(Ease.Flash, 5, 1);
         }
@@ -24,7 +26,7 @@ namespace Electricity
         public void ExecuteOff()
         {
             DOVirtual.Color(light2d.color, Color.clear, 0.8f,
-                value => light2d.color = value).SetEase(Ease.Flash, 5, 1);
+                value => light2d.color = value).OnComplete(() => light2d.enabled = false).SetEase(Ease.Flash, 5, 1);
         }
     }
 }

@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1496879732455200495, guid: 228293068afb2074f99db5a19fc6baac, type: 3}
       propertyPath: m_Name
-      value: Cord Variant
+      value: Cord_2
       objectReference: {fileID: 0}
     - target: {fileID: 4075936608903340183, guid: 228293068afb2074f99db5a19fc6baac, type: 3}
       propertyPath: m_Sprite
