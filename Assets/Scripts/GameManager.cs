@@ -6,7 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private TweenAnimation transition;
-    
+
+    private void Awake()
+    {
+        transition.gameObject.SetActive(true);
+    }
+
     public void RestartLevel()
     {
         transition.Animation.OnRewind(ReloadLevel).PlayBackwards();
@@ -20,7 +25,6 @@ public class GameManager : MonoBehaviour
     public void NexLevel()
     {
         transition.Animation.OnComplete(LoadNextLevel).PlayBackwards();
-       
     }
 
     private void LoadNextLevel()
