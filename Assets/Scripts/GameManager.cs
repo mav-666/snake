@@ -14,16 +14,19 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
+        DOTween.KillAll();
         transition.Animation.OnRewind(ReloadLevel).PlayBackwards();
     }
 
     private void ReloadLevel()
     {
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void NexLevel()
     {
+        DOTween.KillAll();
         transition.Animation.OnComplete(LoadNextLevel).PlayBackwards();
     }
 

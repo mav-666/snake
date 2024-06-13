@@ -32,6 +32,5 @@ namespace Parasite
                 sprite.DOColor(_startColor, leftTime);
             }
         }
-        
     }
 }

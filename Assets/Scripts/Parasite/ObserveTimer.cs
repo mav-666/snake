@@ -16,7 +16,7 @@ namespace Parasite
         
         private BiTimer _timer;
         private int _activeSensorsCount;
-        
+
         private void OnEnable()
         {
             foreach (var sensor in sensors)
