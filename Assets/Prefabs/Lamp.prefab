@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3297685293842425957}
-  - component: {fileID: 2374497794162263469}
   - component: {fileID: 6917290883639639934}
+  - component: {fileID: 8948587993988041886}
+  - component: {fileID: 2374497794162263469}
   - component: {fileID: 5530688720628059106}
   - component: {fileID: 6462015068715276652}
   - component: {fileID: 3950555733847013557}
@@ -39,20 +40,6 @@ Transform:
   - {fileID: 7115345792157782096}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2374497794162263469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1213429896334373138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 238818c80be5a6e419bbbd0da2f23e78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _signalHandler: {fileID: 6917290883639639934}
-  _hasSignalHandler: 1
 --- !u!114 &6917290883639639934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +54,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   executeOnStart: 0
+--- !u!114 &8948587993988041886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213429896334373138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc5f3c67e33463597469cfbc5dc4701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerSensors: []
+--- !u!114 &2374497794162263469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213429896334373138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238818c80be5a6e419bbbd0da2f23e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _signalHandler: {fileID: 6917290883639639934}
+  _hasSignalHandler: 1
 --- !u!114 &5530688720628059106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd978f70968489488ab0fd18aec81f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lampConfig: {fileID: 11400000, guid: 57719a91c4a01354ea04e01043f9bad0, type: 2}
   light2d: {fileID: 7432196083993314189}
 --- !u!58 &6462015068715276652
 CircleCollider2D:

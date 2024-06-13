@@ -2,7 +2,7 @@
 using Snake;
 using UnityEngine;
 
-namespace Parasite
+namespace Parasite.ObserveTimer
 {
     public class SlowDownOnTimer : ObserveTimerHandler
     {

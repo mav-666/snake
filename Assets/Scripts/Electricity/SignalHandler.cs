@@ -1,8 +1,8 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Electricity
 {
+    [RequireComponent(typeof(Electric))]
     public abstract class SignalHandler : MonoBehaviour
     {
         

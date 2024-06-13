@@ -2,11 +2,11 @@
 using Electricity;
 using UnityEngine;
 
-namespace Parasite
+namespace Parasite.ObserveTimer
 {
     public class ObserveTimer : MonoBehaviour
     {
-        [SerializeField] private UpdateSensor[] sensors;
+        [SerializeField] private SensorHandler[] sensors;
 
         [SerializeField] private float timespan;
         
@@ -50,9 +50,6 @@ namespace Parasite
 
         private void FindTarget()
         {
-            if (_activeSensorsCount++ != 0) 
-                return;
-            
             if (_timer.HasReachedBorder)
                 _timer.Start(timespan);
             else
@@ -63,9 +60,6 @@ namespace Parasite
 
         private void LostTarget()
         {
-            if (--_activeSensorsCount != 0)
-                return;
-            
             if (_timer.HasReachedBorder)
                 _timer.Start(timespan, false);
             else

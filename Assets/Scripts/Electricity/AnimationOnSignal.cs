@@ -6,16 +6,16 @@ namespace Electricity
 {
     public class AnimationOnSignal : MonoBehaviour, ISignalExecutor
     {
-        [SerializeField] private TweenAnimation animation;
+        [SerializeField] private TweenAnimation tweenAnimation;
         
         public void ExecuteOn()
         {
-            animation.Animation.Play();
+            tweenAnimation.Animation.Play();
         }
 
         public void ExecuteOff()
         {
-            animation.Animation.PlayBackwards();
+            tweenAnimation.Animation.PlayBackwards();
         }
     }
 }

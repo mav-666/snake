@@ -1,18 +1,18 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 
-namespace Parasite
+namespace Parasite.ObserveTimer
 {
-    public class ColorOnTimer : ObserveTimerHandler
+    public class FadeOnTimer : ObserveTimerHandler
     {
         [SerializeField] private SpriteRenderer[] sprites;
-        [SerializeField] private Color endColor;
+        [SerializeField] private float endAlpha;
         
-        private Color _startColor;
+        private float _startAlpha;
 
         private void Start()
         {
-            _startColor = sprites[0].color;
+            _startAlpha = sprites[0].color.a;
         }
 
         protected override void OnStart(float leftTime)
@@ -20,7 +20,7 @@ namespace Parasite
             foreach (var sprite in sprites)
             {
                 DOTween.Kill(sprite);
-                sprite.DOColor(endColor, leftTime);
+                sprite.DOFade(endAlpha, leftTime);
             }
         }
 
@@ -29,7 +29,7 @@ namespace Parasite
             foreach (var sprite in sprites)
             {
                 DOTween.Kill(sprite);
-                sprite.DOColor(_startColor, leftTime);
+                sprite.DOFade(_startAlpha, leftTime);
             }
         }
     }

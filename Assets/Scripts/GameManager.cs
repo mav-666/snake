@@ -14,24 +14,23 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        DOTween.KillAll();
         transition.Animation.OnRewind(ReloadLevel).PlayBackwards();
     }
 
     private void ReloadLevel()
     {
-        
+        DOTween.KillAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void NexLevel()
     {
-        DOTween.KillAll();
         transition.Animation.OnComplete(LoadNextLevel).PlayBackwards();
     }
 
     private void LoadNextLevel()
     {
+        DOTween.KillAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

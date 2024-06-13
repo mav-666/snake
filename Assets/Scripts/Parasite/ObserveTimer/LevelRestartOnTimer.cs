@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace Parasite
+namespace Parasite.ObserveTimer
 {
     public class LevelRestartOnTimer : MonoBehaviour
     {
@@ -33,7 +33,6 @@ namespace Parasite
         private IEnumerator DelayRestart()
         {
             yield return new WaitForSeconds(delay);
-            
             gameManager.RestartLevel();
         }
     }
