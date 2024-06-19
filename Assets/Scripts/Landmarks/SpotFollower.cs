@@ -34,7 +34,7 @@ namespace Landmarks
         {
             _camera = GetComponent<Camera>();
             
-            Array.Sort(landmarks, (a, b) => a.Area.Priority.CompareTo(b.Area.Priority));
+            Array.Sort(landmarks, (a, b) => b.Area.Priority.CompareTo(a.Area.Priority));
             _zPos = transform.position.z;
 
             SetPos(defaultSpot.GetPoint());
@@ -43,9 +43,8 @@ namespace Landmarks
         private void FixedUpdate()
         {
             var point = target.position;
-
-            if(!IsValidArea || !_currentLandmark.Area.IsInside(point))
-                FindNewAreaBy(point);
+            
+            FindNewAreaBy(point);
 
             var spot = IsValidArea ? _currentLandmark.Spot : defaultSpot;
             LerpToSpot(spot);
@@ -56,9 +55,11 @@ namespace Landmarks
 
         private void FindNewAreaBy(Vector3 point)
         {
+            var isInsideCurrent = IsValidArea && _currentLandmark.Area.IsInside(point);
+            
             foreach (var landMark in landmarks)
             {
-                if (!landMark.Area.IsInside(point))
+                if (!landMark.Area.IsInside(point) || isInsideCurrent && _currentLandmark.Area.Priority > landMark.Area.Priority)
                     continue;
                 
                 _currentLandmark = landMark;
