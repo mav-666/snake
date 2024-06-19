@@ -7,6 +7,7 @@ using Object = UnityEngine.Object;
 
 namespace Utils
 {
+    #if UNITY_EDITOR
     public static class EditorUtils
     {
         [MenuItem("Utils/Reserialize all prefabs")]
@@ -72,4 +73,5 @@ namespace Utils
             return go.AddComponent<T>().GetCopyOf(toAdd) as T;
         }
     }
+    #endif
 }

@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 9646cbf6a1e75dd4c88492bc11361a9d
+guid: 96a15267847a0b44d8b36a0f5eb77e28
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -311288913913169450
-    second: stripe2_0
+      213: 3401854050118795788
+    second: "eye_closed1 \u043A\u043E\u043F\u0456\u044F_0"
+  - first:
+      213: 8250943007568177855
+    second: "eye_closed1 \u043A\u043E\u043F\u0456\u044F_1"
+  - first:
+      213: -4235875737973624098
+    second: "eye_closed1 \u043A\u043E\u043F\u0456\u044F_2"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stripe2_0
+      name: "eye_closed1 \u043A\u043E\u043F\u0456\u044F_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1694
-        height: 95
+        y: 472
+        width: 1293
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +120,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d930bfc1641eabf0800000000000000
-      internalID: -311288913913169450
+      spriteID: c020e0b1c30d53f20800000000000000
+      internalID: 3401854050118795788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "eye_closed1 \u043A\u043E\u043F\u0456\u044F_1"
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 461
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fba281433fc318270800000000000000
+      internalID: 8250943007568177855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "eye_closed1 \u043A\u043E\u043F\u0456\u044F_2"
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 192
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed2f26d75752735c0800000000000000
+      internalID: -4235875737973624098
       vertices: []
       indices: 
       edges: []
@@ -123,7 +171,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -131,7 +179,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      stripe2_0: -311288913913169450
+      "eye_closed1 \u043A\u043E\u043F\u0456\u044F_0": 3401854050118795788
+      "eye_closed1 \u043A\u043E\u043F\u0456\u044F_1": 8250943007568177855
+      "eye_closed1 \u043A\u043E\u043F\u0456\u044F_2": -4235875737973624098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

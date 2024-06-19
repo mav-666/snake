@@ -13,6 +13,7 @@ namespace Parasite
         private PowerSensor _powerSensor;
         
         private Color _lightColor;
+        private Tween _temp;
         
         private void Awake()
         {
@@ -31,17 +32,19 @@ namespace Parasite
             _powerSensor.OnPowerLevelAchieve -= Open;
             _powerSensor.OnPowerLevelLose -= Close;
         }
-        
-        private void Open()
+
+        protected virtual void Open()
         {
+            _temp?.Kill();
             light2d.enabled = true;
-            DOVirtual.Color(light2d.color, _lightColor, duration,
+            _temp = DOVirtual.Color(light2d.color, _lightColor, duration,
                 value => light2d.color = value).SetEase(Ease.Linear);
         }
-        
-        private void Close()
+
+        protected virtual void Close()
         {
-            DOVirtual.Color(light2d.color, Color.clear, duration,
+            _temp?.Kill();
+            _temp = DOVirtual.Color(light2d.color, Color.clear, duration,
                 value => light2d.color = value).OnComplete(() => light2d.enabled = false).SetEase(Ease.Linear);
         }
 

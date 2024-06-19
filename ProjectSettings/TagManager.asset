@@ -43,18 +43,12 @@ TagManager:
   - name: Floor
     uniqueID: 3379232607
     locked: 0
-  - name: Wire
-    uniqueID: 626441453
-    locked: 0
-  - name: Electron
-    uniqueID: 2908657245
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Snake
-    uniqueID: 2077193583
+  - name: Shake
+    uniqueID: 3423144983
     locked: 0
   - name: Above
-    uniqueID: 3876731973
+    uniqueID: 2863275893
     locked: 0
