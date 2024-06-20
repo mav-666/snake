@@ -9,5 +9,6 @@ namespace Electricity
         [Header("Flash animation")]
         public float amplitude;
         public float period;
+        public Color turnedOff;
     }
 }

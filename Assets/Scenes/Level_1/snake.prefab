@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -871822313
-  m_SortingLayer: 1
+  m_SortingLayerID: -915734689
+  m_SortingLayer: -1
   m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: 2ff66afe6e5a22c409c3dc9493aa2bc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShadowGroup: 0
-  m_Priority: 21
+  m_Priority: 0
   m_ComponentVersion: 5
   m_HasRenderer: 1
   m_UseRendererSilhouette: 1
@@ -133,7 +133,7 @@ MonoBehaviour:
     m_FlipX: 0
     m_FlipY: 0
     m_InitialTrim: 0
-  m_CastingOption: 1
+  m_CastingOption: 2
   m_PreviousTrimEdge: 0.01
   m_PreviousEdgeProcessing: 1
   m_PreviousShadowCastingSource: 1
@@ -259,7 +259,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.3532143, y: 0.0029092147}
+  m_ConnectedAnchor: {x: 0.35321555, y: 0.0029085057}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -434,8 +434,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5731266148992050711}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.008062112, w: 0.9999675}
-  m_LocalPosition: {x: 5.1786003, y: 0.7610359, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0.50720006, y: -0.00000055506825, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fff0a27825a47e9b9f2afc8ce1ccef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  observeAngle: 120
+  observeAngle: 200
   radius: 0.5
   targetLayers:
     serializedVersion: 2
@@ -763,11 +763,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5
+      value: -4.6610656
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: -2.5407424
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_LocalPosition.z
@@ -775,19 +775,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9809424
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.19429907
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -799,7 +799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 22.408
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -891,6 +891,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1960851197917871804, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1828750219941355120, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1477630010659675529, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
@@ -1066,16 +1070,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4257508509235537429, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.68180025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257508509235537429, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000004004687
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257508509235537429, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4257508509235537429, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4257508509235537429, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4614850231469255755, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_Layer
@@ -1175,7 +1187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6567902942689043536, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6567902942689043536, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_SortingOrder
@@ -1183,7 +1195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6567902942689043536, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: m_SortingLayerID
-      value: -871822313
+      value: -915734689
       objectReference: {fileID: 0}
     - target: {fileID: 6567902942689043536, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -1267,6 +1279,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3832284941892641049}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7734619602977131583}
     - targetCorrespondingSourceObject: {fileID: 403938137962869919, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       insertIndex: -1
       addedObject: {fileID: 875188999056116446}
@@ -1278,7 +1293,13 @@ PrefabInstance:
       addedObject: {fileID: 8897160369626801938}
     - targetCorrespondingSourceObject: {fileID: 386791141387813222, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 962930123710199157}
+    - targetCorrespondingSourceObject: {fileID: 386791141387813222, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 399271622001291492}
+    - targetCorrespondingSourceObject: {fileID: 386791141387813222, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9001688385585556120}
     - targetCorrespondingSourceObject: {fileID: 3297364353584691495, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8834093313770184375}
@@ -1598,7 +1619,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.30200386, y: 0.000000026402017}
+  m_ConnectedAnchor: {x: 0.30200505, y: -0.0000001937151}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1692,7 +1713,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.33225632, y: 0.00000002904677}
+  m_ConnectedAnchor: {x: 0.33225632, y: -0.000000923872}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1786,7 +1807,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.35071185, y: 0.000000030660203}
+  m_ConnectedAnchor: {x: 0.35071155, y: 0.000000409782}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1880,7 +1901,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.34450343, y: 0.000000030117448}
+  m_ConnectedAnchor: {x: 0.34450462, y: 0.0000003725291}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1974,7 +1995,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.32610324, y: 0.000000028508852}
+  m_ConnectedAnchor: {x: 0.32610577, y: 0.0000005662442}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2068,7 +2089,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.34455872, y: 0.00000003012228}
+  m_ConnectedAnchor: {x: 0.34455985, y: -0.00000074505806}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2162,7 +2183,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.31380284, y: 0.000000027433515}
+  m_ConnectedAnchor: {x: 0.31380427, y: 0.00000010430816}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2256,7 +2277,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.31398785, y: 0.00000002744969}
+  m_ConnectedAnchor: {x: 0.31398687, y: 0.00000011920933}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2350,7 +2371,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.37558755, y: 0.000000032834905}
+  m_ConnectedAnchor: {x: 0.37558746, y: -0.00000020861631}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2444,7 +2465,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.35702133, y: 0.000000031211798}
+  m_ConnectedAnchor: {x: 0.3570203, y: -0.0000002682209}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2538,7 +2559,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.3875657, y: 0.00000003388207}
+  m_ConnectedAnchor: {x: 0.38756615, y: 0.0000002980233}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2632,7 +2653,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.3262787, y: 0.00000002852419}
+  m_ConnectedAnchor: {x: 0.32627982, y: -0.000000037252903}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2731,7 +2752,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.35686103, y: 0.000000031197782}
+  m_ConnectedAnchor: {x: 0.35685846, y: 0.0000003725289}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2825,7 +2846,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.3138046, y: -0.00000092624055}
+  m_ConnectedAnchor: {x: 0.31380442, y: -0.0000015869733}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2919,7 +2940,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.37531286, y: 0.000000032810892}
+  m_ConnectedAnchor: {x: 0.3753131, y: -0.00000005960465}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -3013,7 +3034,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.35065663, y: 0.0000005074927}
+  m_ConnectedAnchor: {x: 0.35065517, y: 0.0000010058287}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -3107,7 +3128,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.2829838, y: 0.000000024739231}
+  m_ConnectedAnchor: {x: 0.28298405, y: -0.000000320375}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -3201,7 +3222,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.30759433, y: 0.000000026890751}
+  m_ConnectedAnchor: {x: 0.30759323, y: 0.0000002011657}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -3344,6 +3365,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actions: {fileID: -944628639613478452, guid: 114b2c429a9c8aa4d9f863ea2f36f2fd, type: 3}
+--- !u!114 &7734619602977131583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4900408756730257855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_Priority: 0
 --- !u!1 &4909085899807726028 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8662986630007924274, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
@@ -3392,7 +3427,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.3321992, y: 0.000000029041775}
+  m_ConnectedAnchor: {x: 0.33219993, y: -0.00000032782563}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -3456,7 +3491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShadowGroup: 0
-  m_Priority: 20
+  m_Priority: 0
   m_ComponentVersion: 5
   m_HasRenderer: 1
   m_UseRendererSilhouette: 1
@@ -3478,14 +3513,14 @@ MonoBehaviour:
   m_ShadowMesh:
     m_Mesh: {fileID: 0}
     m_LocalBounds:
-      m_Center: {x: 0.011077881, y: 0.0146484375, z: 0}
-      m_Extent: {x: 5.184326, y: 0.53556824, z: 0}
+      m_Center: {x: 5.832115, y: 0.016105652, z: 0}
+      m_Extent: {x: 5.184334, y: 0.5355606, z: 0}
     m_EdgeProcessing: 1
     m_TrimEdge: 0.01
     m_FlipX: 0
     m_FlipY: 0
     m_InitialTrim: 0
-  m_CastingOption: 1
+  m_CastingOption: 2
   m_PreviousTrimEdge: 0.01
   m_PreviousEdgeProcessing: 1
   m_PreviousShadowCastingSource: 2
@@ -3543,8 +3578,8 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.33, y: 0}
-  m_ConnectedAnchor: {x: -0.34715784, y: 0.005321595}
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -0.17460027, y: -0.0000006519256}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -3552,8 +3587,44 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 0
   m_AngleLimits:
-    m_LowerAngle: 104.076126
-    m_UpperAngle: 269.0761
+    m_LowerAngle: 350
+    m_UpperAngle: 370
+--- !u!58 &962930123710199157
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095920205107822948}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.0000019073486, y: -0.00000047683716}
+  m_Radius: 0.46
 --- !u!212 &399271622001291492
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3594,9 +3665,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2077193583
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -915734689
+  m_SortingLayer: -1
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 12e150eb0dac56d48aa17c5fefab53c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3608,6 +3679,59 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9001688385585556120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095920205107822948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_Priority: 0
+  m_ComponentVersion: 5
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: 5fff6ac900000000170c09cc751faaaa
+  m_ShapePath:
+  - {x: -0.7050705, y: -0.70507145, z: 0}
+  - {x: -0.7050705, y: 0.7050705, z: 0}
+  - {x: 0.7050724, y: 0.7050705, z: 0}
+  - {x: 0.7050724, y: -0.70507145, z: 0}
+  m_ShapePathHash: 0
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 399271622001291492}
+  m_ShadowShape2DProvider:
+    rid: 2755693257903833190
+  m_ShadowCastingSource: 2
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5399933, y: 0.5399933, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0
+  m_CastingOption: 2
+  m_PreviousTrimEdge: 0
+  m_PreviousEdgeProcessing: 1
+  m_PreviousShadowCastingSource: 2
+  m_PreviousShadowShape2DSource: {fileID: 399271622001291492}
+  references:
+    version: 2
+    RefIds:
+    - rid: 2755693257903833190
+      type: {class: ShadowShape2DProvider_SpriteRenderer, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data: 
 --- !u!1 &5355352704645047371 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 699316857333343305, guid: ed34c696c7f6f004fb77607afad16335, type: 3}
@@ -3656,7 +3780,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.31380475, y: 0.000000027433682}
+  m_ConnectedAnchor: {x: 0.31380427, y: 0.00000010430816}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -3750,7 +3874,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.3321992, y: 0.000000029041775}
+  m_ConnectedAnchor: {x: 0.33219817, y: 0.00000040233144}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -3844,7 +3968,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.33219913, y: 0.000000029041772}
+  m_ConnectedAnchor: {x: 0.3321992, y: 0.0000004768372}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -3943,7 +4067,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.30150414, y: 0.000000026358329}
+  m_ConnectedAnchor: {x: 0.301503, y: 0.00000051409006}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -4048,7 +4172,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.3260498, y: 0.000000028504179}
+  m_ConnectedAnchor: {x: 0.32604802, y: 0.0000006482005}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -4142,7 +4266,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.381464, y: 0.00000003334864}
+  m_ConnectedAnchor: {x: 0.38146523, y: -0.00000014901161}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -4236,7 +4360,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.326046, y: 0.000000028503846}
+  m_ConnectedAnchor: {x: 0.32604763, y: -0.000000230968}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -4330,7 +4454,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.30150414, y: 0.000000026358329}
+  m_ConnectedAnchor: {x: 0.30150366, y: -0.00000029057264}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -4424,7 +4548,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.25837716, y: 0.00000002258805}
+  m_ConnectedAnchor: {x: 0.2583762, y: -0.00000032037505}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -4518,7 +4642,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.320425, y: 0.000000028012442}
+  m_ConnectedAnchor: {x: 0.3204256, y: -0.000000089406946}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -4612,7 +4736,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.39991766, y: 0.00000003496191}
+  m_ConnectedAnchor: {x: 0.39991584, y: -0.000000014901163}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:

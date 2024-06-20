@@ -52,6 +52,7 @@ MonoBehaviour:
   a: {fileID: 0}
   b: {fileID: 0}
   transmitDuration: 0
+  isHigh: 0
   electronPool: {fileID: 0}
 --- !u!114 &5131750273316546494
 MonoBehaviour:

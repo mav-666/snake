@@ -12,6 +12,7 @@ namespace Electricity.Couplers
         [SerializeField] private Electric a;
         [SerializeField] private Electric b;
         [SerializeField] private float transmitDuration;
+        [SerializeField] private bool isHigh;
         [SerializeField, HideInInspector] private SplineElectronPool electronPool;
 
         private SplineComputer _spline;
@@ -41,7 +42,7 @@ namespace Electricity.Couplers
                     electronPool.Release(electron);
                 else
                     electron.Fade(() => electronPool.Release(electron));
-            });
+            }, isHigh);
         }
 
         protected override void TransmitFromB()
@@ -54,7 +55,7 @@ namespace Electricity.Couplers
                     electronPool.Release(electron);
                 else
                     electron.Fade(() => electronPool.Release(electron));
-            }, true);
+            }, isHigh, true);
         }
     }
 }

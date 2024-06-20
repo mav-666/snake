@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ed116b22fb6461844b309e3f0de6e049
+guid: cb088146e1c01424b90a64ee31abcc74
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2718208183002851583
-    second: wire_side_0
+      213: 6147777685625707044
+    second: Fan_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wire_side_0
+      name: Fan_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 433
-        height: 174
+        width: 333
+        height: 316
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff8e175d0f309b520800000000000000
-      internalID: 2718208183002851583
+      spriteID: 42a1bc59b3b415550800000000000000
+      internalID: 6147777685625707044
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      wire_side_0: 2718208183002851583
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

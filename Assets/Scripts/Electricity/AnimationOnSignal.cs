@@ -10,7 +10,7 @@ namespace Electricity
         
         public void ExecuteOn()
         {
-            tweenAnimation.Animation.Play();
+            tweenAnimation.Animation.PlayForward();
         }
 
         public void ExecuteOff()

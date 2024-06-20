@@ -8,6 +8,7 @@ namespace Electricity
     {
         [SerializeField] private LampConfig lampConfig;
         [SerializeField] private Light2D light2d;
+        [SerializeField] private SpriteRenderer lamp;
 
         private Color _lightColor;
         
@@ -23,12 +24,16 @@ namespace Electricity
             light2d.enabled = true;
             DOVirtual.Color(light2d.color, _lightColor, lampConfig.duration,
                 value => light2d.color = value).SetEase(Ease.Flash, lampConfig.amplitude, lampConfig.period);
+            DOVirtual.Color(lamp.color,  Color.white, lampConfig.duration,
+                value => lamp.color = value).SetEase(Ease.Flash, lampConfig.amplitude, lampConfig.period);
         }
 
         public void ExecuteOff()
         {
             DOVirtual.Color(light2d.color, Color.clear, lampConfig.duration,
                 value => light2d.color = value).OnComplete(() => light2d.enabled = false).SetEase(Ease.Flash, lampConfig.amplitude, lampConfig.period);
+            DOVirtual.Color(lamp.color, lampConfig.turnedOff, lampConfig.duration,
+                value => lamp.color = value).SetEase(Ease.Flash, lampConfig.amplitude, lampConfig.period);
         }
     }
 }

@@ -59,14 +59,15 @@ namespace Landmarks
             
             foreach (var landMark in landmarks)
             {
-                if (!landMark.Area.IsInside(point) || isInsideCurrent && _currentLandmark.Area.Priority > landMark.Area.Priority)
+                if (!landMark.Area.IsInside(point) || isInsideCurrent && _currentLandmark.Area.Priority >= landMark.Area.Priority)
                     continue;
                 
                 _currentLandmark = landMark;
                 return;
             }
-
-            _currentLandmark = null;
+            
+            if(!isInsideCurrent)
+                _currentLandmark = null;
         }
         
         private void LerpToSpot(Spot spot)
