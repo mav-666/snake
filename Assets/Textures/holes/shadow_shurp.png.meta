@@ -1,0 +1,1039 @@
+fileFormatVersion: 2
+guid: 8bac0acb7bd45794faf4b977f2006f94
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3207424360047606417
+    second: shadow_shurp_0
+  - first:
+      213: 6006622874936679389
+    second: shadow_shurp_1
+  - first:
+      213: 5474355960833415349
+    second: shadow_shurp_2
+  - first:
+      213: -1981681024271010921
+    second: shadow_shurp_3
+  - first:
+      213: -679820977521823048
+    second: shadow_shurp_4
+  - first:
+      213: 3904661515292306521
+    second: shadow_shurp_5
+  - first:
+      213: 5190613068686926719
+    second: shadow_shurp_6
+  - first:
+      213: 9002049280724038778
+    second: shadow_shurp_7
+  - first:
+      213: 7887729210784052360
+    second: shadow_shurp_8
+  - first:
+      213: 5403916589002840017
+    second: shadow_shurp_9
+  - first:
+      213: 1149496856503236505
+    second: shadow_shurp_10
+  - first:
+      213: -7011136401836352399
+    second: shadow_shurp_11
+  - first:
+      213: -5671994390167740678
+    second: shadow_shurp_12
+  - first:
+      213: 7503158377407826852
+    second: shadow_shurp_13
+  - first:
+      213: 4900302206805727928
+    second: shadow_shurp_14
+  - first:
+      213: -3188172459322674437
+    second: shadow_shurp_15
+  - first:
+      213: -5604277208719928080
+    second: shadow_shurp_16
+  - first:
+      213: 4991343220863475198
+    second: shadow_shurp_17
+  - first:
+      213: 6676734831464800041
+    second: shadow_shurp_18
+  - first:
+      213: 6019843490806379868
+    second: shadow_shurp_19
+  - first:
+      213: -1217145645378763108
+    second: shadow_shurp_20
+  - first:
+      213: 4039621676117711173
+    second: shadow_shurp_21
+  - first:
+      213: -8009531062310796284
+    second: shadow_shurp_22
+  - first:
+      213: 3919778710716567936
+    second: shadow_shurp_23
+  - first:
+      213: 8535082236612597101
+    second: shadow_shurp_24
+  - first:
+      213: 1714840984014497569
+    second: shadow_shurp_25
+  - first:
+      213: 8842650908215511169
+    second: shadow_shurp_26
+  - first:
+      213: -4994612658014469450
+    second: shadow_shurp_27
+  - first:
+      213: -407994064753773830
+    second: shadow_shurp_28
+  - first:
+      213: 2551139601568308793
+    second: shadow_shurp_29
+  - first:
+      213: -1836126285699787354
+    second: shadow_shurp_30
+  - first:
+      213: -4841215078205483653
+    second: shadow_shurp_31
+  - first:
+      213: -5363893040379561513
+    second: shadow_shurp_32
+  - first:
+      213: -5771797872972897312
+    second: shadow_shurp_33
+  - first:
+      213: 2468338137118390616
+    second: shadow_shurp_34
+  - first:
+      213: 5127560124041765744
+    second: shadow_shurp_35
+  - first:
+      213: -1624275339963073005
+    second: shadow_shurp_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: shadow_shurp_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 450
+        width: 93
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f658d67c980fc73d0800000000000000
+      internalID: -3207424360047606417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 553
+        width: 90
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddb16582eafcb5350800000000000000
+      internalID: 6006622874936679389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_2
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 611
+        width: 81
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b89483fdb1d8fb40800000000000000
+      internalID: 5474355960833415349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_3
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 490
+        width: 72
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 793b13a9b97af74e0800000000000000
+      internalID: -1981681024271010921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_4
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 612
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b2f3fb3c6ac096f0800000000000000
+      internalID: -679820977521823048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_5
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 347
+        width: 137
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ce22bd5f4203630800000000000000
+      internalID: 3904661515292306521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_6
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 510
+        width: 45
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f73a59db513c80840800000000000000
+      internalID: 5190613068686926719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_7
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 491
+        width: 47
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a74fd1c3024bdec70800000000000000
+      internalID: 9002049280724038778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_8
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 580
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 884714d1de7d67d60800000000000000
+      internalID: 7887729210784052360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_9
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 528
+        width: 33
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d7da5ba1819efa40800000000000000
+      internalID: 5403916589002840017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_10
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 505
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997bd4afc45d3ff00800000000000000
+      internalID: 1149496856503236505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_11
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 530
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17cdbb0d69073be90800000000000000
+      internalID: -7011136401836352399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_12
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 521
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe1b0657270941b0800000000000000
+      internalID: -5671994390167740678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_13
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 480
+        width: 38
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4abc3e27ac2902860800000000000000
+      internalID: 7503158377407826852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_14
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 448
+        width: 22
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bad7b8e4ee510440800000000000000
+      internalID: 4900302206805727928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_15
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 502
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf273673a0651c3d0800000000000000
+      internalID: -3188172459322674437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_16
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 478
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f45e67429b9932b0800000000000000
+      internalID: -5604277208719928080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_17
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 484
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efd1f9fc630d44540800000000000000
+      internalID: 4991343220863475198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_18
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 475
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92fdfe054f688ac50800000000000000
+      internalID: 6676734831464800041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_19
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 321
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5536f8a2c7ca8350800000000000000
+      internalID: 6019843490806379868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_20
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 350
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c960947fb74db1fe0800000000000000
+      internalID: -1217145645378763108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_21
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 364
+        width: 12
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 549d6f7f28e9f0830800000000000000
+      internalID: 4039621676117711173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 286
+        width: 24
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40402856fed68d090800000000000000
+      internalID: -8009531062310796284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_23
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 244
+        width: 49
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 081566238f9d56630800000000000000
+      internalID: 3919778710716567936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_24
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 273
+        width: 46
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d655a0ac214b27670800000000000000
+      internalID: 8535082236612597101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_25
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 269
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12727721ac65cc710800000000000000
+      internalID: 1714840984014497569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_26
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 97
+        width: 66
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18888f0962867ba70800000000000000
+      internalID: 8842650908215511169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_27
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 62
+        width: 76
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2c06800429faab0800000000000000
+      internalID: -4994612658014469450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_28
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 186
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af232eb4f83865af0800000000000000
+      internalID: -407994064753773830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_29
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 153
+        width: 91
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e19eb73f7776320800000000000000
+      internalID: 2551139601568308793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_30
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 27
+        width: 140
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a55b121fd4c486e0800000000000000
+      internalID: -1836126285699787354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_31
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 118
+        width: 49
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b751c46498c80dcb0800000000000000
+      internalID: -4841215078205483653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_32
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 148
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d97cfae2bf9f85b0800000000000000
+      internalID: -5363893040379561513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_33
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 143
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e368123a6476efa0800000000000000
+      internalID: -5771797872972897312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_34
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 102
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 859bd78357c414220800000000000000
+      internalID: 2468338137118390616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_35
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 98
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073a7fd04c0c82740800000000000000
+      internalID: 5127560124041765744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow_shurp_36
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 95
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ef2102f2a6579e0800000000000000
+      internalID: -1624275339963073005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      shadow_shurp_0: -3207424360047606417
+      shadow_shurp_1: 6006622874936679389
+      shadow_shurp_10: 1149496856503236505
+      shadow_shurp_11: -7011136401836352399
+      shadow_shurp_12: -5671994390167740678
+      shadow_shurp_13: 7503158377407826852
+      shadow_shurp_14: 4900302206805727928
+      shadow_shurp_15: -3188172459322674437
+      shadow_shurp_16: -5604277208719928080
+      shadow_shurp_17: 4991343220863475198
+      shadow_shurp_18: 6676734831464800041
+      shadow_shurp_19: 6019843490806379868
+      shadow_shurp_2: 5474355960833415349
+      shadow_shurp_20: -1217145645378763108
+      shadow_shurp_21: 4039621676117711173
+      shadow_shurp_22: -8009531062310796284
+      shadow_shurp_23: 3919778710716567936
+      shadow_shurp_24: 8535082236612597101
+      shadow_shurp_25: 1714840984014497569
+      shadow_shurp_26: 8842650908215511169
+      shadow_shurp_27: -4994612658014469450
+      shadow_shurp_28: -407994064753773830
+      shadow_shurp_29: 2551139601568308793
+      shadow_shurp_3: -1981681024271010921
+      shadow_shurp_30: -1836126285699787354
+      shadow_shurp_31: -4841215078205483653
+      shadow_shurp_32: -5363893040379561513
+      shadow_shurp_33: -5771797872972897312
+      shadow_shurp_34: 2468338137118390616
+      shadow_shurp_35: 5127560124041765744
+      shadow_shurp_36: -1624275339963073005
+      shadow_shurp_4: -679820977521823048
+      shadow_shurp_5: 3904661515292306521
+      shadow_shurp_6: 5190613068686926719
+      shadow_shurp_7: 9002049280724038778
+      shadow_shurp_8: 7887729210784052360
+      shadow_shurp_9: 5403916589002840017
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
