@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Graphic.Animation
 {
-    public class TweenAnimations : TweenAnimation
+    public class SequenceAnimation : TweenAnimation
     {
         [SerializeField] private TweenAnimation[] animations;
         [SerializeField] private bool playOnStart;
@@ -21,10 +21,9 @@ namespace Graphic.Animation
             foreach (var animation in animations)
             {
                 animation.Init();
-                sequence.Join(animation.Animation);
+                sequence.Append(animation.Animation);
             }
-                
-
+            
             Animation = sequence;
         }
 
@@ -39,7 +38,5 @@ namespace Graphic.Animation
         {
             Animation.PlayBackwards();
         }
-
-      
     }
 }

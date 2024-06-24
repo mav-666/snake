@@ -9,12 +9,13 @@ namespace Parasite
     {
         [SerializeField] private Light2D light2d;
         [SerializeField] private float duration;
-        
+        [SerializeField] private Animator animator;
+
         private PowerSensor _powerSensor;
         
         private Color _lightColor;
         private Tween _temp;
-        
+
         private void Awake()
         {
             _powerSensor = GetComponent<PowerSensor>();
@@ -39,6 +40,7 @@ namespace Parasite
             light2d.enabled = true;
             _temp = DOVirtual.Color(light2d.color, _lightColor, duration,
                 value => light2d.color = value).SetEase(Ease.Linear);
+            animator.SetTrigger("trOpen");
         }
 
         protected virtual void Close()
@@ -46,6 +48,7 @@ namespace Parasite
             _temp?.Kill();
             _temp = DOVirtual.Color(light2d.color, Color.clear, duration,
                 value => light2d.color = value).OnComplete(() => light2d.enabled = false).SetEase(Ease.Linear);
+            animator.SetTrigger("trClose");
         }
 
     }

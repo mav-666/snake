@@ -7,6 +7,7 @@ namespace Parasite
     public class AnimatedParasiteEye : ParasiteEye
     {
         [SerializeField] private TweenAnimation anim;
+        
 
         private void Start()
         {

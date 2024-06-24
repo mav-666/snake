@@ -1,14 +1,13 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Parasite
 {
     public abstract class PowerSensor : SensorHandler
     {
-        [SerializeField] private int startPowerLevel;
-
-        protected int _powerLevel;
-
+        [SerializeField] protected int powerLevel;
+        
         private bool _hasRequiredPower;
         
         public event Action OnPowerLevelAchieve;
@@ -17,21 +16,19 @@ namespace Parasite
         public abstract void PowerUp();
 
         public abstract void PowerDown();
-
-        protected override void Awake()
-        {
-            base.Awake();
-            _powerLevel = startPowerLevel;
-        }
-
+        
         private void Start()
         {
-            if(_hasRequiredPower)
-                OnPowerLevelAchieve?.Invoke();
-            else
-                OnPowerLevelLose?.Invoke();
+            StartCoroutine(WaitAndEvent());
         }
 
+        private IEnumerator WaitAndEvent()
+        {
+            yield return 1;
+            
+            PowerLevelEvent();
+        }
+        
         private void Update()
         {
             UpdatePowerLevel();

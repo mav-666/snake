@@ -23,6 +23,15 @@ namespace Electricity.Couplers
             electronPool = FindFirstObjectByType<SplineElectronPool>();
             EditorUtility.SetDirty(this);
         }
+
+        [ContextMenu("Swap")]
+        private void Swap()
+        {
+            var temp = a;
+            a = b;
+            b = temp;
+            EditorUtility.SetDirty(this);
+        }
 #endif
 
         private void Start()

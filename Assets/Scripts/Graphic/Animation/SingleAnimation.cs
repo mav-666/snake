@@ -7,12 +7,13 @@ namespace Graphic.Animation
     {
         [SerializeField] private float duration;
         [SerializeField] private Ease ease;
-        
-        private void Awake()
+
+
+        public override void Init()
         {
             Animation = CreateAnimation(duration).Pause().SetEase(ease).SetRelative().SetAutoKill(false);
         }
-        
+
         protected abstract Tween CreateAnimation(float duration);
     }
 }
