@@ -2,14 +2,26 @@
 using Graphic.Animation;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utils;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private TweenAnimation transition;
+    
+    private CheckpointHandler _checkpointHandler;
 
+    private bool _hasCheckpoints;
+    
     private void Awake()
     {
+        _hasCheckpoints = TryGetComponent( out _checkpointHandler);
         transition.gameObject.SetActive(true);
+    }
+
+    private void Start()
+    {
+        if(_hasCheckpoints)
+            _checkpointHandler.LoadCheckPoint();
     }
 
     public void RestartLevel()
@@ -25,6 +37,9 @@ public class GameManager : MonoBehaviour
 
     public void NexLevel()
     {
+        if(_hasCheckpoints)
+            _checkpointHandler.Reset();
+        
         transition.Animation.OnComplete(LoadNextLevel).PlayBackwards();
     }
 

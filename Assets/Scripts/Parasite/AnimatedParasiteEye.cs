@@ -20,7 +20,7 @@ namespace Parasite
             anim.Animation.Play();
         }
 
-        protected override void Close()
+        public override void Close()
         {
             base.Close();
             anim.Animation.Pause();

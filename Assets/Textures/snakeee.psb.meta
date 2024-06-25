@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3f494919cbc2e3148af3146a7784e775
+guid: ed34c696c7f6f004fb77607afad16335
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -3065,7 +3065,7 @@ ScriptedImporter:
   pSDLayerImportSetting: []
   psdLayers:
   - name: "\u0428\u0430\u0440 1"
-    spriteName: "\u0428\u0430\u0440 1"
+    spriteName: "8<\x01"
     isGroup: 0
     parentIndex: -1
     spriteID: 28f7c35c42f87204fb3b7e2f7f04dacb

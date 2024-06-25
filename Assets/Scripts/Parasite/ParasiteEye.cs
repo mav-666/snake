@@ -43,7 +43,7 @@ namespace Parasite
             animator.SetTrigger("trOpen");
         }
 
-        protected virtual void Close()
+        public virtual void Close()
         {
             _temp?.Kill();
             _temp = DOVirtual.Color(light2d.color, Color.clear, duration,

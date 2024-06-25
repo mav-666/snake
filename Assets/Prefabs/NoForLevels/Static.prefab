@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0feb37a59342f78504fdaff3307366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initOnAwake: 0
   duration: 1
   ease: 14
   relativePoint: {x: 220, y: 0, z: 0}
@@ -179,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0feb37a59342f78504fdaff3307366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initOnAwake: 0
   duration: 1
   ease: 14
   relativePoint: {x: -220, y: 0, z: 0}
@@ -232,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f531feb4781f4f90a8f7b5c121680aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initOnAwake: 1
   animations:
   - {fileID: 7328045049094385840}
   - {fileID: 3457923915985739352}
