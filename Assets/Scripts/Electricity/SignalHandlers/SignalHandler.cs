@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 
-namespace Electricity
+namespace Electricity.SignalHandlers
 {
     [RequireComponent(typeof(Electric))]
     public abstract class SignalHandler : MonoBehaviour
     {
         
-        private ISignalExecutor[] _executors;
+        private SignalExecutor[] _executors;
 
         protected virtual void Awake()
         {
-            _executors = GetComponents<ISignalExecutor>();
+            _executors = GetComponents<SignalExecutor>();
         }
 
         public abstract void ReceiveSignal();

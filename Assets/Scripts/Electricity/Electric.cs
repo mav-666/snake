@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Electricity.Couplers;
+using Electricity.SignalHandlers;
 using UnityEngine;
 
 #if UNITY_EDITOR

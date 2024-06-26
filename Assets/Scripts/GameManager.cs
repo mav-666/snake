@@ -37,15 +37,24 @@ public class GameManager : MonoBehaviour
 
     public void NexLevel()
     {
-        if(_hasCheckpoints)
+        if (_hasCheckpoints)
+        {
             _checkpointHandler.Reset();
+            _checkpointHandler.enabled = false;
+        }
+           
         
-        transition.Animation.OnComplete(LoadNextLevel).PlayBackwards();
+        transition.Animation.OnRewind(LoadNextLevel).PlayBackwards();
     }
 
     private void LoadNextLevel()
     {
         DOTween.KillAll();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
+        var current = SceneManager.GetActiveScene().buildIndex;
+        if (SceneManager.sceneCount <= ++current)
+            current = 0;
+        
+        SceneManager.LoadScene(current);
     }
 }

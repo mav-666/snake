@@ -2,9 +2,9 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-namespace Electricity
+namespace Electricity.SignalHandlers
 {
-    public class Lamp : MonoBehaviour, ISignalExecutor
+    public class Lamp : SignalExecutor
     {
         [SerializeField] private LampConfig lampConfig;
         [SerializeField] private Light2D light2d;
@@ -19,7 +19,7 @@ namespace Electricity
             light2d.color = Color.clear;    
         }
         
-        public void ExecuteOn()
+        public override void ExecuteOn()
         {
             light2d.enabled = true;
             DOVirtual.Color(light2d.color, _lightColor, lampConfig.duration,
@@ -28,7 +28,7 @@ namespace Electricity
                 value => lamp.color = value).SetEase(Ease.Flash, lampConfig.amplitude, lampConfig.period);
         }
 
-        public void ExecuteOff()
+        public override void ExecuteOff()
         {
             DOVirtual.Color(light2d.color, Color.clear, lampConfig.duration,
                 value => light2d.color = value).OnComplete(() => light2d.enabled = false).SetEase(Ease.Flash, lampConfig.amplitude, lampConfig.period);

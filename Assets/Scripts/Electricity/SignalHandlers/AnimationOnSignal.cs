@@ -2,18 +2,18 @@
 using Graphic.Animation;
 using UnityEngine;
 
-namespace Electricity
+namespace Electricity.SignalHandlers
 {
-    public class AnimationOnSignal : MonoBehaviour, ISignalExecutor
+    public class AnimationOnSignal : SignalExecutor
     {
         [SerializeField] private TweenAnimation tweenAnimation;
         
-        public void ExecuteOn()
+        public override void ExecuteOn()
         {
             tweenAnimation.Animation.PlayForward();
         }
 
-        public void ExecuteOff()
+        public override void ExecuteOff()
         {
             tweenAnimation.Animation.PlayBackwards();
         }

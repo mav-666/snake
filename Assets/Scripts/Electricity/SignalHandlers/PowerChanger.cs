@@ -1,19 +1,19 @@
 ﻿using Parasite;
 using UnityEngine;
 
-namespace Electricity
+namespace Electricity.SignalHandlers
 {
-    public class PowerChanger : MonoBehaviour, ISignalExecutor
+    public class PowerChanger : SignalExecutor
     {
         [SerializeField] private PowerSensor[] powerSensors;
         
-        public void ExecuteOn()
+        public override void ExecuteOn()
         {
             foreach (var powerSensor in powerSensors)
                 powerSensor.PowerUp();
         }
 
-        public void ExecuteOff()
+        public override void ExecuteOff()
         {
             foreach (var powerSensor in powerSensors)
                 powerSensor.PowerDown();

@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
-namespace Electricity
+namespace Electricity.SignalHandlers
 {
     public class TimerSignalHandler : SignalHandler
     {
         [SerializeField] private float enabledTime;
-        private ISignalExecutor[] _executors;
+        private SignalExecutor[] _executors;
 
         private Timer _timer;
         

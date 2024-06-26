@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Electricity
+namespace Electricity.SignalHandlers
 {
     [CreateAssetMenu]
     public class LampConfig : ScriptableObject
