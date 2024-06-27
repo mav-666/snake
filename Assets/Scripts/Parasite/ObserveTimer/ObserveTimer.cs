@@ -1,5 +1,6 @@
 ﻿using System;
 using Electricity;
+using GameController;
 using UnityEngine;
 
 namespace Parasite.ObserveTimer

@@ -5,7 +5,6 @@ namespace Utils
 {
     public class ConnectToChild : MonoBehaviour
     {
-
         [ContextMenu("aa")]
         private void Connect()
         {

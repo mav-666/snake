@@ -1,11 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Electricity.Couplers
 {
     public abstract class FindingCoupler : Coupler
     {
-        private enum Order {A, B}
-        
         [SerializeField] private Finder finderA;
         [SerializeField] private Finder finderB;
 
@@ -14,6 +13,9 @@ namespace Electricity.Couplers
         
         public bool IsConnectedA { get; private set; }
         public bool IsConnectedB { get; private set; }
+
+        public event Action<Order> OnConnect;
+        public event Action<Order> OnDisconnect;
         
         public void FindUnconnected()
         {
@@ -29,6 +31,10 @@ namespace Electricity.Couplers
                 return;
             
             IsConnectedA = finderA.Find(out A) && A != B;
+            
+            if(IsConnectedA)
+                OnConnect?.Invoke(Order.A);
+            
             CheckInit();
         }
         
@@ -38,6 +44,9 @@ namespace Electricity.Couplers
                 return;
             
             IsConnectedB = finderB.Find(out B) && B != A;
+            
+            if(IsConnectedB)
+                OnConnect?.Invoke(Order.B);
             
             CheckInit();
         }
@@ -58,12 +67,18 @@ namespace Electricity.Couplers
         
         public virtual void BreakA()
         {
+            if(IsConnectedA)
+                OnDisconnect?.Invoke(Order.A);
+            
             IsConnectedA = false;
             CheckBreak();
         }
 
         public virtual void BreakB()
         {
+            if(IsConnectedB)
+                OnDisconnect?.Invoke(Order.B);
+            
             IsConnectedB = false;
             CheckBreak();
         }

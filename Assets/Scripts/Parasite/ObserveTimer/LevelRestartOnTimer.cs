@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using GameController;
 using UnityEngine;
 
 namespace Parasite.ObserveTimer

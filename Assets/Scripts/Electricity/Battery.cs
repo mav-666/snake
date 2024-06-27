@@ -1,4 +1,5 @@
 using Electricity.Couplers;
+using GameController;
 using UnityEngine;
 
 namespace Electricity

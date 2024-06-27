@@ -2,11 +2,9 @@
 using Electricity;
 using Landmarks;
 using Parasite;
-using UnityEditor;
-using UnityEditor.Rendering.PostProcessing;
 using UnityEngine;
 
-namespace Utils
+namespace GameController
 {
     public class CheckpointHandler : MonoBehaviour
     {

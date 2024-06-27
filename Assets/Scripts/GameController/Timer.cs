@@ -1,4 +1,4 @@
-﻿namespace Electricity
+﻿namespace GameController
 {
     public class Timer
     {

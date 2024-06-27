@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Electricity
+namespace GameController
 {
     public class BiTimer 
     {

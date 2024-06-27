@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using GameController;
+using UnityEngine;
 
 namespace Electricity.SignalHandlers
 {
