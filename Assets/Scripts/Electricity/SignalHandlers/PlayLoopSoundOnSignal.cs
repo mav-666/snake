@@ -27,6 +27,7 @@ namespace Electricity.SignalHandlers
         {
             _temp = audioSourcePool.Get();
             _temp.volume = 0;
+            _temp.pitch = 1;
             _temp.loop = true;
             _temp.clip = audioClip;
             _temp.transform.SetParent(transform);

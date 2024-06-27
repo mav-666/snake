@@ -21,12 +21,14 @@ namespace GameController
         
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.layer != layerMask)
+            if ((layerMask & (1 << other.gameObject.layer)) == 0)
                 return;
             
             var temp = audioSourcePool.Get();
             temp.transform.SetParent(transform);
             temp.volume = 1;
+            temp.pitch = Random.Range(0.9f, 1.1f);
+            temp.transform.position = other.GetContact(0).point;
             temp.loop = false;
             temp.clip = audioClip;
 
@@ -38,6 +40,7 @@ namespace GameController
         {
             yield return new WaitForSeconds(temp.clip.length);
             
+            temp.transform.position = Vector3.zero;
             audioSourcePool.Release(temp);
         }
     }

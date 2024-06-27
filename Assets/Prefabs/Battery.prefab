@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 676950034252589225}
   - component: {fileID: 7177526888848917115}
   - component: {fileID: 2137690762135854757}
+  - component: {fileID: 7515470599587407436}
   m_Layer: 0
   m_Name: Battery
   m_TagString: Untagged
@@ -150,3 +151,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7515470599587407436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285426285194735909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843faa98c2f541e8b78219c1f80552bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  audioClip: {fileID: 8300000, guid: c91488dd29c38dd45a10ad7c88710ec6, type: 3}
+  audioSourcePool: {fileID: 0}

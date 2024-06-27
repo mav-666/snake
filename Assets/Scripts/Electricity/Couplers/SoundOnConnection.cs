@@ -48,6 +48,7 @@ namespace Electricity.Couplers
             var temp = audioSourcePool.Get();
             temp.transform.SetParent(order == Order.A ? targetA : targetB);
             temp.volume = 1;
+            temp.pitch = Random.Range(0.9f, 1.1f);
             temp.loop = false;
             temp.clip = connectSounds[Random.Range(0, disconnectSounds.Length)];;
 

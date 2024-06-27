@@ -26,6 +26,7 @@ namespace Electricity.SignalHandlers
             var temp = audioSourcePool.Get();
             temp.transform.SetParent(transform);
             temp.volume = 1;
+            temp.pitch = Random.Range(0.9f, 1.1f);
             temp.loop = false;
             
             temp.clip = on;
@@ -39,6 +40,7 @@ namespace Electricity.SignalHandlers
             var temp = audioSourcePool.Get();
             temp.transform.SetParent(transform);
             temp.volume = 1;
+            temp.pitch = Random.Range(0.9f, 1.1f);
             temp.loop = false;
             temp.clip = off;
 

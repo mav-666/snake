@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7824441214171406251}
   - component: {fileID: 8356970148577682869}
   - component: {fileID: 1566949019811391983}
+  - component: {fileID: 2836575066591809130}
   m_Layer: 0
   m_Name: bobbin-up
   m_TagString: Untagged
@@ -151,3 +152,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2836575066591809130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462023234090258453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843faa98c2f541e8b78219c1f80552bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 65
+  audioClip: {fileID: 8300000, guid: b9d3a2510151b9044a2da6db251dad85, type: 3}
+  audioSourcePool: {fileID: 0}
