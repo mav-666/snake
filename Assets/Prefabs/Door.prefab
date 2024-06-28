@@ -249,7 +249,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b93f765941ea4344cb93f62e2ebe25d0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.801718, g: 0.7334211, b: 0.90188676, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -459,7 +459,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 9646cbf6a1e75dd4c88492bc11361a9d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.801718, g: 0.7334211, b: 0.90188676, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -546,7 +546,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 401f91e7693eda84ebd1dd20b8da75bf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.801718, g: 0.7334211, b: 0.90188676, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -778,7 +778,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 3.7}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &5862410129097853422
 MonoBehaviour:
@@ -830,16 +830,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 9054058665970300504}
     m_Modifications:
     - target: {fileID: 4544531598727298094, guid: 722e154469f127341b04d2493443a6f5, type: 3}
-      propertyPath: m_Color.b
+      propertyPath: m_FlipX
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544531598727298094, guid: 722e154469f127341b04d2493443a6f5, type: 3}
+      propertyPath: m_FlipY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544531598727298094, guid: 722e154469f127341b04d2493443a6f5, type: 3}
+      propertyPath: m_Color.b
+      value: 0.90188676
       objectReference: {fileID: 0}
     - target: {fileID: 4544531598727298094, guid: 722e154469f127341b04d2493443a6f5, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.83552146
       objectReference: {fileID: 0}
     - target: {fileID: 4544531598727298094, guid: 722e154469f127341b04d2493443a6f5, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.86111116
       objectReference: {fileID: 0}
     - target: {fileID: 4544531598727298094, guid: 722e154469f127341b04d2493443a6f5, type: 3}
       propertyPath: m_SortingLayer
@@ -859,11 +867,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7735607451870568994, guid: 722e154469f127341b04d2493443a6f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9347732
+      value: -3.0251298
       objectReference: {fileID: 0}
     - target: {fileID: 7735607451870568994, guid: 722e154469f127341b04d2493443a6f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2272203
+      value: 2.346587
       objectReference: {fileID: 0}
     - target: {fileID: 7735607451870568994, guid: 722e154469f127341b04d2493443a6f5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -871,7 +879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7735607451870568994, guid: 722e154469f127341b04d2493443a6f5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9946952
+      value: -0.789955
       objectReference: {fileID: 0}
     - target: {fileID: 7735607451870568994, guid: 722e154469f127341b04d2493443a6f5, type: 3}
       propertyPath: m_LocalRotation.x
@@ -883,7 +891,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7735607451870568994, guid: 722e154469f127341b04d2493443a6f5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.102866426
+      value: 0.6131648
       objectReference: {fileID: 0}
     - target: {fileID: 7735607451870568994, guid: 722e154469f127341b04d2493443a6f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -895,7 +903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7735607451870568994, guid: 722e154469f127341b04d2493443a6f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 11.809
+      value: -75.637
       objectReference: {fileID: 0}
     - target: {fileID: 8267469219072126810, guid: 722e154469f127341b04d2493443a6f5, type: 3}
       propertyPath: m_Name
