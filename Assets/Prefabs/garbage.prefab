@@ -72,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingLayerID: -915734689
+  m_SortingLayer: -1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -8590723637383652466, guid: a695f52dc06dae643bb5f7357f3b240c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,7 +98,6 @@ GameObject:
   - component: {fileID: 2506925482508225039}
   - component: {fileID: 7986330231592180024}
   - component: {fileID: 3504903881406777579}
-  - component: {fileID: 8583351410314917036}
   m_Layer: 0
   m_Name: garbage
   m_TagString: Untagged
@@ -322,15 +321,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!210 &8583351410314917036
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8693250399083838794}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortAtRoot: 0

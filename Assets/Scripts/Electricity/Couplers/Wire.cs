@@ -1,3 +1,4 @@
+using System.Linq;
 using Dreamteck.Splines;
 using Electricity.Couplers.Electrons;
 using UnityEngine;
@@ -20,7 +21,8 @@ namespace Electricity.Couplers
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            electronPool = FindFirstObjectByType<SplineElectronPool>();
+            electronPool = FindObjectsByType<SplineElectronPool>(FindObjectsSortMode.None)
+                .First(pool => pool.ElectronType == (isHigh ? SplineElectronPool.ElectronLayer.Above : SplineElectronPool.ElectronLayer.Floor));
             EditorUtility.SetDirty(this);
         }
 
@@ -51,7 +53,7 @@ namespace Electricity.Couplers
                     electronPool.Release(electron);
                 else
                     electron.Fade(() => electronPool.Release(electron));
-            }, isHigh);
+            });
         }
 
         protected override void TransmitFromB()
@@ -64,7 +66,7 @@ namespace Electricity.Couplers
                     electronPool.Release(electron);
                 else
                     electron.Fade(() => electronPool.Release(electron));
-            }, isHigh, true);
+            }, true);
         }
     }
 }
