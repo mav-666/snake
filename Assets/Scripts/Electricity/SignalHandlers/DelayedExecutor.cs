@@ -19,7 +19,7 @@ namespace Electricity.SignalHandlers
         public override void ExecuteOff()
         {
             _temp?.Kill();
-            _temp = DOVirtual.DelayedCall(delay,() => signalExecutor.ExecuteOn());
+            _temp = DOVirtual.DelayedCall(delay,() => signalExecutor.ExecuteOff());
         }
     }
 }

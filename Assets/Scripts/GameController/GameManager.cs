@@ -53,9 +53,9 @@ namespace GameController
             DOTween.KillAll();
         
             var current = SceneManager.GetActiveScene().buildIndex;
-            if (SceneManager.sceneCount <= ++current)
+            Debug.Log($"Switched to the next scene {current}");
+            if (SceneManager.sceneCountInBuildSettings <= ++current)
                 current = 0;
-        
             SceneManager.LoadScene(current);
         }
     }

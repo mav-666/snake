@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: virus1
+  m_Name: virus 1
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -23,9 +23,9 @@ AnimationClip:
     - time: 0
       value: {fileID: 0}
     - time: 0.083333336
-      value: {fileID: 1828910403991811539, guid: 41527c911a237e646bd299f3828b295b, type: 3}
+      value: {fileID: 4697980567481808742, guid: 82e1b3df8745d3c46b28ffecf9cfd9b1, type: 3}
     - time: 0.16666667
-      value: {fileID: 4854302714135222205, guid: 41527c911a237e646bd299f3828b295b, type: 3}
+      value: {fileID: -8587975679145158127, guid: 82e1b3df8745d3c46b28ffecf9cfd9b1, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -49,8 +49,8 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: 0}
-    - {fileID: 1828910403991811539, guid: 41527c911a237e646bd299f3828b295b, type: 3}
-    - {fileID: 4854302714135222205, guid: 41527c911a237e646bd299f3828b295b, type: 3}
+    - {fileID: 4697980567481808742, guid: 82e1b3df8745d3c46b28ffecf9cfd9b1, type: 3}
+    - {fileID: -8587975679145158127, guid: 82e1b3df8745d3c46b28ffecf9cfd9b1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
