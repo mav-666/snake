@@ -24,7 +24,11 @@ namespace Electricity.SignalHandlers
         public override void ExecuteOn()
         {
             var temp = audioSourcePool.Get();
-            temp.transform.SetParent(transform);
+      
+            Transform trans;
+            (trans = temp.transform).SetParent(transform);
+            trans.localPosition = Vector3.zero;
+            
             temp.volume = 1;
             temp.pitch = Random.Range(0.9f, 1.1f);
             temp.loop = false;
@@ -38,7 +42,11 @@ namespace Electricity.SignalHandlers
         public override void ExecuteOff()
         {
             var temp = audioSourcePool.Get();
-            temp.transform.SetParent(transform);
+            
+            Transform trans;
+            (trans = temp.transform).SetParent(transform);
+            trans.localPosition = Vector3.zero;
+            
             temp.volume = 1;
             temp.pitch = Random.Range(0.9f, 1.1f);
             temp.loop = false;

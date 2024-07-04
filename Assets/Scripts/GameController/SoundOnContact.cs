@@ -25,7 +25,11 @@ namespace GameController
                 return;
             
             var temp = audioSourcePool.Get();
-            temp.transform.SetParent(transform);
+ 
+            Transform trans;
+            (trans = temp.transform).SetParent(transform);
+            trans.localPosition = Vector3.zero;
+            
             temp.volume = 1;
             temp.pitch = Random.Range(0.9f, 1.1f);
             temp.transform.position = other.GetContact(0).point;

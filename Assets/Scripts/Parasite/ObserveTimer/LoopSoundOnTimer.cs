@@ -29,7 +29,11 @@ namespace Parasite.ObserveTimer
             _temp.volume = 0;
             _temp.loop = true;
             _temp.clip = audioClip;
-            _temp.transform.SetParent(transform);
+            
+            Transform trans;
+            (trans = _temp.transform).SetParent(transform);
+            trans.localPosition = Vector3.zero;
+            
             _isPlaying = true;
             
             _temp.Play();

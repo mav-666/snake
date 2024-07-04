@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 5902264806251553418}
   - component: {fileID: 3905582656558997107}
   - component: {fileID: 6385293472337083886}
-  - component: {fileID: 1793889762411686332}
   m_Layer: 0
   m_Name: lamp
   m_TagString: Untagged
@@ -195,20 +194,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   on: {fileID: 0}
   off: {fileID: 3581787084183704509}
---- !u!114 &1793889762411686332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1213429896334373138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12fb317e2dd1464baf9f70859b9d8bcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 7cc8d28461dddb046b9bb684bda7d9a9, type: 3}
-  audioSourcePool: {fileID: 0}
 --- !u!1 &1540236175991281515
 GameObject:
   m_ObjectHideFlags: 0

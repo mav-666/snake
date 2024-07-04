@@ -16,7 +16,7 @@ namespace Electricity.SignalHandlers
 
         private IEnumerator ExecuteOnStart()
         {
-            yield return 0;
+            yield return null;
             
             ReceiveSignal();
         }

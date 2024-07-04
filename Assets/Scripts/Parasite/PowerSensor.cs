@@ -24,7 +24,7 @@ namespace Parasite
 
         private IEnumerator WaitAndEvent()
         {
-            yield return 1;
+            yield return null;
             
             PowerLevelEvent();
         }

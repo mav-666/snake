@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 namespace Electricity.Couplers
 {
+    [RequireComponent(typeof(FindingCoupler))]
     public class SoundOnConnection : MonoBehaviour
     {
         [SerializeField] private AudioClip[] connectSounds;
@@ -46,11 +47,15 @@ namespace Electricity.Couplers
         private void ConnectSound(Order order)
         {
             var temp = audioSourcePool.Get();
-            temp.transform.SetParent(order == Order.A ? targetA : targetB);
+            
+            Transform trans;
+            (trans = temp.transform).SetParent(order == Order.A ? targetA : targetB);
+            trans.localPosition = Vector3.zero;
+            
             temp.volume = 1;
             temp.pitch = Random.Range(0.9f, 1.1f);
             temp.loop = false;
-            temp.clip = connectSounds[Random.Range(0, disconnectSounds.Length)];;
+            temp.clip = connectSounds[Random.Range(0, connectSounds.Length)];;
 
             temp.Play();
             StartCoroutine(ReleaseAfterPlay(temp));
@@ -59,8 +64,13 @@ namespace Electricity.Couplers
         private void DisconnectSound(Order order)
         {
             var temp = audioSourcePool.Get();
-            temp.transform.SetParent(order == Order.A ? targetA : targetB);
+            
+            Transform trans;
+            (trans = temp.transform).SetParent(order == Order.A ? targetA : targetB);
+            trans.localPosition = Vector3.zero;
+            
             temp.volume = 1;
+            temp.pitch = Random.Range(0.9f, 1.1f);
             temp.loop = false;
             temp.clip = disconnectSounds[Random.Range(0, disconnectSounds.Length)];
 

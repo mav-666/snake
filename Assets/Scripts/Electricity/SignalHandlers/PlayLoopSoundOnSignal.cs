@@ -30,7 +30,10 @@ namespace Electricity.SignalHandlers
             _temp.pitch = 1;
             _temp.loop = true;
             _temp.clip = audioClip;
-            _temp.transform.SetParent(transform);
+            
+            Transform trans;
+            (trans = _temp.transform).SetParent(transform);
+            trans.localPosition = Vector3.zero;
             _isPlaying = true;
             
             _temp.Play();
