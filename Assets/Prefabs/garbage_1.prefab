@@ -78,11 +78,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8693250399083838794, guid: 27fac93c6741e204d9121e9e0c7fd650, type: 3}
       propertyPath: m_Name
-      value: garbage_1 Variant
+      value: garbage_1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1060778042819362713, guid: 27fac93c6741e204d9121e9e0c7fd650, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8693250399083838794, guid: 27fac93c6741e204d9121e9e0c7fd650, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6562780093902612601}
+    - targetCorrespondingSourceObject: {fileID: 8693250399083838794, guid: 27fac93c6741e204d9121e9e0c7fd650, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4923366432637342017}
   m_SourcePrefab: {fileID: 100100000, guid: 27fac93c6741e204d9121e9e0c7fd650, type: 3}
+--- !u!1 &6074182782973612540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8693250399083838794, guid: 27fac93c6741e204d9121e9e0c7fd650, type: 3}
+  m_PrefabInstance: {fileID: 3237934350154968246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-6562780093902612601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074182782973612540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843faa98c2f541e8b78219c1f80552bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 65
+--- !u!114 &4923366432637342017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074182782973612540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7865a75fcedd488aae66834043ad3f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourcePool: {fileID: 0}
+  onSounds:
+  - {fileID: 8300000, guid: b9d3a2510151b9044a2da6db251dad85, type: 3}
+  offSounds: []

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3559919778148722945}
   - component: {fileID: 8949591068018076231}
   - component: {fileID: 4960043898763775263}
+  - component: {fileID: 2265516332459711853}
+  - component: {fileID: 8205829815989737487}
   m_Layer: 0
   m_Name: bunchOfWires
   m_TagString: Untagged
@@ -444,3 +446,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2265516332459711853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8941020138485259701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843faa98c2f541e8b78219c1f80552bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &8205829815989737487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8941020138485259701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7865a75fcedd488aae66834043ad3f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourcePool: {fileID: 0}
+  onSounds:
+  - {fileID: 8300000, guid: b9d3a2510151b9044a2da6db251dad85, type: 3}
+  offSounds: []

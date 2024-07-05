@@ -4906,6 +4906,7 @@ GameObject:
   - component: {fileID: 3864847793002824014}
   - component: {fileID: 2009107072323536519}
   - component: {fileID: 8180753713283835879}
+  - component: {fileID: 5673293296030968784}
   m_Layer: 6
   m_Name: tale
   m_TagString: Tale
@@ -5067,6 +5068,23 @@ MonoBehaviour:
   obstacleLayers:
     serializedVersion: 2
     m_Bits: 1
+--- !u!114 &5673293296030968784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173835146191997043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7865a75fcedd488aae66834043ad3f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourcePool: {fileID: 0}
+  onSounds:
+  - {fileID: 8300000, guid: cdd57f5697d1b304c8c492240d7466ae, type: 3}
+  offSounds:
+  - {fileID: 8300000, guid: b9106cf5585a9224db34e0c2c582c3b8, type: 3}
 --- !u!1 &2476700730900018752
 GameObject:
   m_ObjectHideFlags: 0
@@ -5218,6 +5236,7 @@ GameObject:
   - component: {fileID: 3908567564641806169}
   - component: {fileID: 6824847177082446486}
   - component: {fileID: 5944848869414011370}
+  - component: {fileID: 7152626525004523169}
   m_Layer: 6
   m_Name: head
   m_TagString: Untagged
@@ -5356,6 +5375,23 @@ MonoBehaviour:
   obstacleLayers:
     serializedVersion: 2
     m_Bits: 1
+--- !u!114 &7152626525004523169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4582790705448019518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7865a75fcedd488aae66834043ad3f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourcePool: {fileID: 0}
+  onSounds:
+  - {fileID: 8300000, guid: cdd57f5697d1b304c8c492240d7466ae, type: 3}
+  offSounds:
+  - {fileID: 8300000, guid: b9106cf5585a9224db34e0c2c582c3b8, type: 3}
 --- !u!1 &4947178102209751890
 GameObject:
   m_ObjectHideFlags: 0
@@ -17300,13 +17336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c142c51d6f6a495ca15815349a96007f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectSounds:
-  - {fileID: 8300000, guid: cdd57f5697d1b304c8c492240d7466ae, type: 3}
-  disconnectSounds:
-  - {fileID: 8300000, guid: b9106cf5585a9224db34e0c2c582c3b8, type: 3}
-  targetA: {fileID: 3221844825970023534}
-  targetB: {fileID: 7874125712544628109}
-  audioSourcePool: {fileID: 0}
+  soundPlayerA: {fileID: 7152626525004523169}
+  soundPlayerB: {fileID: 5673293296030968784}
 --- !u!1 &3699166039695828810 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 386791141387813222, guid: ed34c696c7f6f004fb77607afad16335, type: 3}

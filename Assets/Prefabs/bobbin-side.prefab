@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4328035817115984773}
   - component: {fileID: 3323923433545684674}
   - component: {fileID: -5608696188768015470}
+  - component: {fileID: 4304702492678121419}
   m_Layer: 0
   m_Name: bobbin-side
   m_TagString: Untagged
@@ -177,5 +178,19 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 65
-  audioClip: {fileID: 8300000, guid: b9d3a2510151b9044a2da6db251dad85, type: 3}
+--- !u!114 &4304702492678121419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661497772273707429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7865a75fcedd488aae66834043ad3f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   audioSourcePool: {fileID: 0}
+  onSounds:
+  - {fileID: 8300000, guid: b9d3a2510151b9044a2da6db251dad85, type: 3}
+  offSounds: []

@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 304042406015415501}
   - component: {fileID: 4329916423258590491}
   - component: {fileID: 3679861122568766783}
+  - component: {fileID: 1229879020991567040}
   m_Layer: 0
   m_Name: trash
   m_TagString: Untagged
@@ -190,8 +191,22 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 65
-  audioClip: {fileID: 8300000, guid: b9d3a2510151b9044a2da6db251dad85, type: 3}
+--- !u!114 &1229879020991567040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256485949590338088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7865a75fcedd488aae66834043ad3f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   audioSourcePool: {fileID: 0}
+  onSounds:
+  - {fileID: 8300000, guid: b9d3a2510151b9044a2da6db251dad85, type: 3}
+  offSounds: []
 --- !u!1 &4889995478743792116
 GameObject:
   m_ObjectHideFlags: 0

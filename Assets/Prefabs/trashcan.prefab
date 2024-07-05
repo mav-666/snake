@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 6332569813624090109}
   - component: {fileID: 4246278318875620536}
   - component: {fileID: 3261274951579961807}
+  - component: {fileID: 8810249520204693324}
   m_Layer: 0
   m_Name: trashcan
   m_TagString: Untagged
@@ -236,5 +237,19 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
-  audioClip: {fileID: 8300000, guid: c91488dd29c38dd45a10ad7c88710ec6, type: 3}
+--- !u!114 &8810249520204693324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9155135558881758051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7865a75fcedd488aae66834043ad3f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   audioSourcePool: {fileID: 0}
+  onSounds:
+  - {fileID: 8300000, guid: c91488dd29c38dd45a10ad7c88710ec6, type: 3}
+  offSounds: []

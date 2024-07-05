@@ -1,27 +1,14 @@
 ﻿using System.Collections;
-using Electricity.Couplers.Electrons;
-using GameController;
-using UnityEditor;
 using UnityEngine;
 
-namespace Electricity.SignalHandlers
+namespace GameController
 {
-    public class PlaySoundOnSignal : SignalExecutor
+    public class SingleSoundPlayer : SoundPlayer
     {
-        [SerializeField] private AudioClip on;
-        [SerializeField] private AudioClip off;
+        [SerializeField] private AudioClip[] onSounds;
+        [SerializeField] private AudioClip[] offSounds;
         
-        [SerializeField, HideInInspector] private AudioSourcePool audioSourcePool;
-        
-#if UNITY_EDITOR
-        private void OnValidate()
-        {
-            audioSourcePool = FindFirstObjectByType<AudioSourcePool>();
-            EditorUtility.SetDirty(this);
-        }
-#endif
-        
-        public override void ExecuteOn()
+        public override void On()
         {
             var temp = audioSourcePool.Get();
       
@@ -33,13 +20,13 @@ namespace Electricity.SignalHandlers
             temp.pitch = Random.Range(0.9f, 1.1f);
             temp.loop = false;
             
-            temp.clip = on;
+            temp.clip = onSounds[Random.Range(0, onSounds.Length)];
 
             temp.Play();
             StartCoroutine(ReleaseAfterPlay(temp));
         }
-        
-        public override void ExecuteOff()
+
+        public override void Off()
         {
             var temp = audioSourcePool.Get();
             
@@ -50,7 +37,7 @@ namespace Electricity.SignalHandlers
             temp.volume = 1;
             temp.pitch = Random.Range(0.9f, 1.1f);
             temp.loop = false;
-            temp.clip = off;
+            temp.clip = offSounds[Random.Range(0, offSounds.Length)];
 
             temp.Play();
             StartCoroutine(ReleaseAfterPlay(temp));
@@ -62,6 +49,5 @@ namespace Electricity.SignalHandlers
             
             audioSourcePool.Release(temp);
         }
-
     }
 }

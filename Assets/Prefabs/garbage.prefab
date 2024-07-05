@@ -98,6 +98,8 @@ GameObject:
   - component: {fileID: 2506925482508225039}
   - component: {fileID: 7986330231592180024}
   - component: {fileID: 3504903881406777579}
+  - component: {fileID: -650584292507685866}
+  - component: {fileID: -196448700927504405}
   m_Layer: 0
   m_Name: garbage
   m_TagString: Untagged
@@ -321,3 +323,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-650584292507685866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8693250399083838794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843faa98c2f541e8b78219c1f80552bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 65
+--- !u!114 &-196448700927504405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8693250399083838794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7865a75fcedd488aae66834043ad3f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourcePool: {fileID: 0}
+  onSounds:
+  - {fileID: 8300000, guid: b9d3a2510151b9044a2da6db251dad85, type: 3}
+  offSounds: []
