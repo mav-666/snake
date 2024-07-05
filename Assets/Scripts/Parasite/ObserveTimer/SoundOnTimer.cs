@@ -8,6 +8,7 @@ namespace Parasite.ObserveTimer
 
         protected override void Awake()
         {
+            base.Awake();
             _soundPlayer = GetComponent<SoundPlayer>();
         }
         

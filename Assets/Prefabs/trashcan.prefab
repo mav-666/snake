@@ -253,3 +253,5 @@ MonoBehaviour:
   onSounds:
   - {fileID: 8300000, guid: c91488dd29c38dd45a10ad7c88710ec6, type: 3}
   offSounds: []
+  pitchOn: {x: 0.9, y: 1.1}
+  pitchOff: {x: 0.9, y: 1.1}

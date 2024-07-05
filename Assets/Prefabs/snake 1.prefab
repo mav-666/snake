@@ -5085,6 +5085,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cdd57f5697d1b304c8c492240d7466ae, type: 3}
   offSounds:
   - {fileID: 8300000, guid: b9106cf5585a9224db34e0c2c582c3b8, type: 3}
+  pitchOn: {x: 0.9, y: 1.1}
+  pitchOff: {x: 0.9, y: 1.1}
 --- !u!1 &2476700730900018752
 GameObject:
   m_ObjectHideFlags: 0
@@ -5392,6 +5394,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cdd57f5697d1b304c8c492240d7466ae, type: 3}
   offSounds:
   - {fileID: 8300000, guid: b9106cf5585a9224db34e0c2c582c3b8, type: 3}
+  pitchOn: {x: 0.9, y: 1.1}
+  pitchOff: {x: 0.9, y: 1.1}
 --- !u!1 &4947178102209751890
 GameObject:
   m_ObjectHideFlags: 0

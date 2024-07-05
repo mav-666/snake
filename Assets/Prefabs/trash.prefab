@@ -207,6 +207,8 @@ MonoBehaviour:
   onSounds:
   - {fileID: 8300000, guid: b9d3a2510151b9044a2da6db251dad85, type: 3}
   offSounds: []
+  pitchOn: {x: 0.9, y: 1.1}
+  pitchOff: {x: 0.9, y: 1.1}
 --- !u!1 &4889995478743792116
 GameObject:
   m_ObjectHideFlags: 0
