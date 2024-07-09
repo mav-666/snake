@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 6782515825335390745}
   - component: {fileID: 3560866212430982170}
   - component: {fileID: 7561197726599792219}
+  - component: {fileID: 1462691004076440055}
   - component: {fileID: 2202639533046752328}
   - component: {fileID: 2963873295437892206}
   - component: {fileID: 3442611372897817994}
-  - component: {fileID: 165768354858086596}
   m_Layer: 0
   m_Name: DeathSystem
   m_TagString: Untagged
@@ -118,6 +118,19 @@ MonoBehaviour:
     maxSpeed: 1.5
   - segmentMobility: {fileID: 0}
     maxSpeed: 1.5
+--- !u!114 &1462691004076440055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7476745220457352531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6381d24d7ddb44c28190643a59ea37a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coupler: {fileID: 0}
 --- !u!114 &2202639533046752328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,18 +171,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00896289ba9548b2b490ac45eec48306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &165768354858086596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7476745220457352531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3e5de7f3daf44439a0ba73d4163e5b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSourcePool: {fileID: 0}
-  audioClip: {fileID: 8300000, guid: d435d056482f0c241b20d942607bb83b, type: 3}
-  volume: 1
+  soundPlayer: {fileID: 0}

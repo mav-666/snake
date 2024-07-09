@@ -1,5 +1,5 @@
 ﻿namespace Electricity.Couplers
 { 
-    public enum Order {A, B}
+    public enum Order {A, B, AB}
     
 }

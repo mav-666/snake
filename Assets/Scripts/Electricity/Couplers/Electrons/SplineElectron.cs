@@ -1,33 +1,30 @@
 ﻿using System;
-using System.Reflection;
 using Dreamteck.Splines;
-using UnityEngine.Rendering.Universal;
 
 namespace Electricity.Couplers.Electrons
 {
     public class SplineElectron : Electron
     {
         private SplineFollower _follower;
-
+        
         protected override void Awake()
         {
             base.Awake();
             _follower = GetComponent<SplineFollower>();
         }
 
-        public void Init(SplineComputer spline, float duration, Action onReach, bool isBackward = false)
+        public void Init(SplineComputer spline, float duration, Action onFail, Action onReach, bool isBackward = false)
         {
-            _follower.followDuration = duration;
-            _follower.spline = spline;
+            base.Init(onFail, spline.GetHashCode());
             
-            ResetColor();
+            _follower.followDuration = duration;
+            _follower.follow = true;
+            _follower.spline = spline;
             
             if (isBackward)
                 ResetBackward(onReach);
             else
                 ResetForward(onReach);
-            
-            
         }
         
         private void ResetBackward(Action onReach)
@@ -46,6 +43,11 @@ namespace Electricity.Couplers.Electrons
             gameObject.SetActive(true);
             _follower.direction = Spline.Direction.Forward;
             _follower.Restart();
+        }
+
+        protected override void Stop()
+        {
+            _follower.follow = false;
         }
     }
 }

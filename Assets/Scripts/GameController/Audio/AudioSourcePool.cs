@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Utils;
 
-namespace GameController
+namespace GameController.Audio
 {
     public class AudioSourcePool : ObjectPool<AudioSource> {}
 }

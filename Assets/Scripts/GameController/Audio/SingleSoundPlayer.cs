@@ -2,7 +2,7 @@
 using SneakySquirrelLabs.MinMaxRangeAttribute;
 using UnityEngine;
 
-namespace GameController
+namespace GameController.Audio
 {
     public class SingleSoundPlayer : SoundPlayer
     {

@@ -21,7 +21,11 @@ namespace Electricity.Couplers
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            electronPool = FindObjectsByType<SplineElectronPool>(FindObjectsSortMode.None)
+            var findObjectsByType = FindObjectsByType<SplineElectronPool>(FindObjectsSortMode.None);
+            if(findObjectsByType.Length == 0)
+                return;
+            
+            electronPool = findObjectsByType
                 .First(pool => pool.ElectronType == (isHigh ? SplineElectronPool.ElectronLayer.Above : SplineElectronPool.ElectronLayer.Floor));
             EditorUtility.SetDirty(this);
         }
@@ -32,6 +36,19 @@ namespace Electricity.Couplers
             var temp = a;
             a = b;
             b = temp;
+            EditorUtility.SetDirty(this);
+        }
+
+        [ContextMenu("FindNearestElectric")]
+        private void FindNearestElectric()
+        {
+            var allElectric = FindObjectsByType<Electric>(FindObjectsSortMode.None);
+            
+            var spline = GetComponent<SplineComputer>();
+            
+            a = allElectric.OrderBy(electric => Vector3.Distance(electric.transform.position, spline.GetPoint(0).position)).First();
+            b = allElectric.OrderBy(electric => Vector3.Distance(electric.transform.position, spline.GetPoint(spline.pointCount - 1).position)).First();
+
             EditorUtility.SetDirty(this);
         }
 #endif
@@ -47,26 +64,30 @@ namespace Electricity.Couplers
         {
             var electron = electronPool.Get(false);
            
-            electron.Init(_spline, transmitDuration, () =>
-            {
-                if (b.ReceiveSignal(this))
-                    electronPool.Release(electron);
-                else
-                    electron.Fade(() => electronPool.Release(electron));
-            });
+            electron.Init(_spline, transmitDuration,
+                () => electronPool.Release(electron),
+                () =>
+                    {
+                        if (b.ReceiveSignal(this))
+                            electronPool.Release(electron);
+                        else
+                            electron.Fade();
+                    });
         }
 
         protected override void TransmitFromB()
         {
             var electron = electronPool.Get(false);
             
-            electron.Init(_spline, transmitDuration, () =>
-            {
-                if (a.ReceiveSignal(this))
-                    electronPool.Release(electron);
-                else
-                    electron.Fade(() => electronPool.Release(electron));
-            }, true);
+            electron.Init(_spline, transmitDuration, 
+                () => electronPool.Release(electron),
+                () =>
+                    {
+                        if (a.ReceiveSignal(this))
+                            electronPool.Release(electron);
+                        else
+                            electron.Fade();
+                    }, true);
         }
     }
 }

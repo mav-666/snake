@@ -16,6 +16,8 @@ namespace Electricity.Couplers
 
         public event Action<Order> OnConnect;
         public event Action<Order> OnDisconnect;
+
+        [HideInInspector] public bool CanNotConnect;
         
         public void FindUnconnected()
         {
@@ -27,7 +29,7 @@ namespace Electricity.Couplers
 
         public virtual void FindA()
         {
-            if(IsConnectedA)
+            if(IsConnectedA || CanNotConnect)
                 return;
             
             IsConnectedA = finderA.Find(out A) && A != B;
@@ -40,7 +42,7 @@ namespace Electricity.Couplers
         
         public virtual void FindB()
         {
-            if(IsConnectedB)
+            if(IsConnectedB || CanNotConnect)
                 return;
             
             IsConnectedB = finderB.Find(out B) && B != A;

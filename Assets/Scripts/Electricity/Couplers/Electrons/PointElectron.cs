@@ -14,15 +14,20 @@ namespace Electricity.Couplers.Electrons
         private float _absoluteDuration;
         
         private int _currentPoint;
+
+        private bool _isStopped;
         
-        public void Init(Transform[] points, float duration)
+        public void Init(Transform[] points, float duration, Action onFail, int shipID)
         {
+            base.Init(onFail, shipID);
+            
             _points = points;
             _currentPoint = 0;
             _absoluteDuration = duration;
+            _isStopped = false;
             CalcAbsoluteDistance();
             OnReachedEnd = null;
-            ResetColor();
+           
 
             var trans = transform;
             trans.position = _points[0].position;
@@ -49,6 +54,8 @@ namespace Electricity.Couplers.Electrons
 
         private void ReachPoint()
         {
+            if(_isStopped)
+                Fade();
             if (++_currentPoint >= _points.Length)
                 ReachEnd();
             else
@@ -58,6 +65,12 @@ namespace Electricity.Couplers.Electrons
         private void ReachEnd()
         {
             OnReachedEnd?.Invoke();
+        }
+        
+        protected override void Stop()
+        {
+            _isStopped = true;
+            DOTween.Kill(transform);
         }
     }
 }

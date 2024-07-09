@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 4329916423258590491}
   - component: {fileID: 3679861122568766783}
   - component: {fileID: 1229879020991567040}
+  - component: {fileID: -5545257129557702043}
   m_Layer: 0
   m_Name: trash
   m_TagString: Untagged
@@ -209,6 +210,18 @@ MonoBehaviour:
   offSounds: []
   pitchOn: {x: 0.9, y: 1.1}
   pitchOff: {x: 0.9, y: 1.1}
+--- !u!210 &-5545257129557702043
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256485949590338088}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &4889995478743792116
 GameObject:
   m_ObjectHideFlags: 0

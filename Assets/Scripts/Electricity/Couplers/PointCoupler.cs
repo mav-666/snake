@@ -79,7 +79,7 @@ namespace Electricity.Couplers
             foreach (var electron in _activeElectrons)
             {
                 DOTween.Kill(electron.transform);
-                electron.Fade(() => electronPool.Release(electron));
+                electron.Fade();
             }
             _activeElectrons.Clear();
         }
@@ -97,14 +97,14 @@ namespace Electricity.Couplers
         private void TransmitElectron(Transform[] points, Func<bool> receiveSignal)
         {
             var electron = electronPool.Get(false);
-            electron.Init(points, transmitDuration);
+            electron.Init(points, transmitDuration, () => electronPool.Release(electron), GetHashCode());
 
             electron.OnReachedEnd += () =>
             {
                 if (receiveSignal.Invoke())
                     Release(electron);
                 else
-                    electron.Fade(() => Release(electron));
+                    electron.Fade();
             };
 
             _activeElectrons.Add(electron);

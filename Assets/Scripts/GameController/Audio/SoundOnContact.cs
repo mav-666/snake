@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GameController
+namespace GameController.Audio
 {
     [RequireComponent(typeof(SoundPlayer))]
     public class SoundOnContact : MonoBehaviour

@@ -9,7 +9,7 @@ namespace Graphic
         private void Start()
         {
             _restore = transform.parent.localRotation;
-        }
+        }  
 
         private void Update()
         {
