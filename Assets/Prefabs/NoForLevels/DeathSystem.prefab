@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 7561197726599792219}
   - component: {fileID: 1462691004076440055}
   - component: {fileID: 2202639533046752328}
-  - component: {fileID: 2963873295437892206}
   - component: {fileID: 3442611372897817994}
   m_Layer: 0
   m_Name: DeathSystem
@@ -145,20 +144,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   delay: 2
---- !u!114 &2963873295437892206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7476745220457352531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a53b8318b64ac4ab9023bfcceddb36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volume: {fileID: 0}
-  endIntensity: 0.8
 --- !u!114 &3442611372897817994
 MonoBehaviour:
   m_ObjectHideFlags: 0

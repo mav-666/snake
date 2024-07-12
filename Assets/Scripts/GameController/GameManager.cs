@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using Graphic.Animation;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 namespace GameController
@@ -8,7 +9,7 @@ namespace GameController
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private TweenAnimation transition;
-    
+
         private CheckpointHandler _checkpointHandler;
 
         private bool _hasCheckpoints;
@@ -58,5 +59,21 @@ namespace GameController
                 current = 0;
             SceneManager.LoadScene(current);
         }
+
+        public void SetLevel(int index)
+        {
+            transition.Animation.OnRewind(() => LoadLevel(index)).PlayBackwards();
+        }
+
+        private void LoadLevel(int index)
+        {
+            DOTween.KillAll();
+            
+            Debug.Log($"Switched to the next scene {index}");
+            if (SceneManager.sceneCountInBuildSettings <= index)
+                index = 0;
+            SceneManager.LoadScene(index);
+        }
+        
     }
 }

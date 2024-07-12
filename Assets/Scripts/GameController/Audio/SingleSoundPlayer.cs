@@ -11,46 +11,59 @@ namespace GameController.Audio
 
         [SerializeField, MinMaxRange(0f, 2f)] private Vector2 pitchOn = new (0.9f, 1.1f);
         [SerializeField, MinMaxRange(0f, 2f)] private Vector2 pitchOff = new (0.9f, 1.1f);
-        
+
+        protected AudioSource _temp;
+
         public override void On()
         {
-            var temp = audioSourcePool.Get();
+            _temp = audioSourcePool.Get();
       
-            Transform trans;
-            (trans = temp.transform).SetParent(transform);
-            trans.localPosition = Vector3.zero;
-            
-            temp.volume = 1;
-            temp.pitch = Random.Range(pitchOn.x, pitchOn.y);
-            temp.loop = false;
-            
-            temp.clip = onSounds[Random.Range(0, onSounds.Length)];
+            InitSound(true);
 
-            temp.Play();
-            StartCoroutine(ReleaseAfterPlay(temp));
+            _temp.Play();
+            StartCoroutine(ReleaseCoroutine(_temp));
         }
 
         public override void Off()
         {
-            var temp = audioSourcePool.Get();
+            _temp = audioSourcePool.Get();
             
+            InitSound(false);
+
+            _temp.Play();
+            StartCoroutine(ReleaseCoroutine(_temp));
+        }
+
+        protected virtual void InitSound(bool isOn)
+        {
             Transform trans;
-            (trans = temp.transform).SetParent(transform);
+            (trans = _temp.transform).SetParent(transform);
             trans.localPosition = Vector3.zero;
             
-            temp.volume = 1;
-            temp.pitch = Random.Range(pitchOff.x, pitchOff.y);
-            temp.loop = false;
-            temp.clip = offSounds[Random.Range(0, offSounds.Length)];
-
-            temp.Play();
-            StartCoroutine(ReleaseAfterPlay(temp));
+            _temp.volume = 1;
+            _temp.loop = false;
+            
+            if (isOn)
+            {
+                _temp.pitch = Random.Range(pitchOn.x, pitchOn.y);
+                _temp.clip = onSounds[Random.Range(0, onSounds.Length)]; 
+            }
+            else
+            {
+                _temp.pitch = Random.Range(pitchOff.x, pitchOff.y);
+                _temp.clip = offSounds[Random.Range(0, offSounds.Length)]; 
+            }
         }
         
-        private IEnumerator ReleaseAfterPlay(AudioSource temp)
+        private IEnumerator ReleaseCoroutine(AudioSource temp)
         {
             yield return new WaitForSeconds(temp.clip.length);
             
+            Release(temp);
+        }
+
+        protected virtual void Release(AudioSource temp)
+        {
             audioSourcePool.Release(temp);
         }
     }

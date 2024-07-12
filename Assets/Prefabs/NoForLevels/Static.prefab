@@ -369,8 +369,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSourcePool: {fileID: 0}
-  audioClip: {fileID: 8300000, guid: f61074a485c254d499d4db3e95643fe5, type: 3}
-  volume: 1
+  audioClip: {fileID: 8300000, guid: 12f2c88ec6241b44ca2a72662f73590f, type: 3}
+  volume: 0.05
+  fadeInDuration: 15
+  fadeOutDuration: 0.3
   audioMixerGroup: {fileID: -7205919033855410022, guid: 8264a69bd61c5ce4ca52f013243cb6fa, type: 2}
 --- !u!114 &2232198387503700224
 MonoBehaviour:

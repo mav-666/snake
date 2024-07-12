@@ -1,5 +1,4 @@
-﻿using System;
-using DG.Tweening;
+﻿using System.Collections;
 using UnityEngine;
 
 namespace Electricity.Couplers
@@ -32,7 +31,14 @@ namespace Electricity.Couplers
                 return;
             
             _findingCoupler.CanNotConnect = true;
-            DOVirtual.DelayedCall(delay, () => _findingCoupler.CanNotConnect = false);
+            StartCoroutine(DisableCoroutine());
+        }
+
+        private IEnumerator DisableCoroutine()
+        {
+            yield return new WaitForSeconds(delay);
+            
+            _findingCoupler.CanNotConnect = false;
         }
     }
 }

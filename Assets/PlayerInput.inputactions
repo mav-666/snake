@@ -15,15 +15,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Raise",
-                    "type": "Button",
-                    "id": "acc6e0cc-f872-4fe1-be68-d976bb132d8d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Connect",
                     "type": "Button",
                     "id": "f06cc647-ed8a-40cf-884f-6815ef64e768",
@@ -155,17 +146,6 @@
                 },
                 {
                     "name": "",
-                    "id": "1375ce76-0a2f-4bad-b6d8-d45d2deb3f85",
-                    "path": "<Keyboard>/shift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Raise",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "c0a94327-d7c4-436c-85cc-7d7c614e5a44",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -177,8 +157,30 @@
                 },
                 {
                     "name": "",
+                    "id": "14404d10-1b86-4675-a45e-ff8f1236cd5d",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Connect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0ae1d1ac-c7cd-40c1-8855-f6b75846d3bb",
                     "path": "<Keyboard>/space",
+                    "interactions": "Hold(duration=0.5)",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "DIsconnect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "130940c4-20b9-4577-bd50-fc0596ba371a",
+                    "path": "<Keyboard>/z",
                     "interactions": "Hold(duration=0.5)",
                     "processors": "",
                     "groups": "Keyboard&Mouse",

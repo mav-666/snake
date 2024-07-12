@@ -39,7 +39,7 @@ namespace Electricity
             _couplers.Remove(coupler);
         }
 
-        protected bool SendSignal()
+        protected virtual bool SendSignal()
         {
             foreach (var coupler in _couplers)
                 coupler.Transmit(this);

@@ -26,6 +26,9 @@ namespace Electricity.Couplers
             
             A.Disconnect(this);
             B.Disconnect(this);
+
+            A = null;
+            B = null;
         }
 
         public void Transmit(Electric sender)

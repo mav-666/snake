@@ -6,18 +6,11 @@ namespace Graphic.Animation
     public class FadeAnimation : SingleAnimation
     {
         [SerializeField] private float endAlpha;
+        [SerializeField] private SpriteRenderer sprite;
         
-        private SpriteRenderer _sprite;
-
-        protected override void Awake()
-        {
-            _sprite = GetComponent<SpriteRenderer>();
-            base.Awake();
-        }
-
         protected override Tween CreateAnimation(float duration)
         {
-            return _sprite.DOFade(endAlpha, duration).Play();
+            return sprite.DOFade(endAlpha, duration).Play();
         }
     }
 }

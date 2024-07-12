@@ -33,7 +33,8 @@ Transform:
   m_LocalPosition: {x: -2.4312615, y: 1.0437616, z: 0}
   m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 2920064491115128054}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
 --- !u!114 &676950034252589225
@@ -52,6 +53,7 @@ MonoBehaviour:
   _hasSignalHandler: 0
   frequency: 4
   enabledOnStart: 1
+  soundPlayer: {fileID: 7188979595788048290}
 --- !u!61 &7177526888848917115
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -96,7 +98,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.23, y: 3.06}
+  m_Size: {x: 14.07, y: 10.96}
   m_EdgeRadius: 0
 --- !u!212 &2137690762135854757
 SpriteRenderer:
@@ -182,6 +184,56 @@ MonoBehaviour:
   audioSourcePool: {fileID: 0}
   onSounds:
   - {fileID: 8300000, guid: c91488dd29c38dd45a10ad7c88710ec6, type: 3}
+  offSounds: []
+  pitchOn: {x: 0.9, y: 1.1}
+  pitchOff: {x: 0.9, y: 1.1}
+--- !u!1 &4307821275222153141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2920064491115128054}
+  - component: {fileID: 7188979595788048290}
+  m_Layer: 0
+  m_Name: sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2920064491115128054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4307821275222153141}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7016488721342178712}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7188979595788048290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4307821275222153141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7865a75fcedd488aae66834043ad3f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourcePool: {fileID: 0}
+  onSounds:
+  - {fileID: 8300000, guid: 990ce3a12b32698409542ade3146fd45, type: 3}
   offSounds: []
   pitchOn: {x: 0.9, y: 1.1}
   pitchOff: {x: 0.9, y: 1.1}

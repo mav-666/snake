@@ -1,5 +1,6 @@
 using Electricity.Couplers;
 using GameController;
+using GameController.Audio;
 using UnityEngine;
 
 namespace Electricity
@@ -8,7 +9,7 @@ namespace Electricity
     {
         [SerializeField] private float frequency;
         [SerializeField] private bool enabledOnStart;
-
+        [SerializeField] private SoundPlayer soundPlayer;
         private Timer _timer;
 
         protected override void Awake()
@@ -44,7 +45,13 @@ namespace Electricity
         {
             _timer.Stop();
         }
-        
+
+        protected override bool SendSignal()
+        {
+            soundPlayer.On();
+            return base.SendSignal();
+        }
+
         public override bool ReceiveSignal(Coupler sender)
         {
             base.ReceiveSignal(sender);

@@ -8,6 +8,9 @@ namespace GameController.Audio
         [SerializeField] private AudioClip audioClip;
         [SerializeField] private float volume = 1;
 
+        [SerializeField] private float fadeInDuration = 0.3f;
+        [SerializeField] private float fadeOutDuration = 0.3f;
+
         protected AudioSource _temp;
         private bool _isPlaying;
         
@@ -20,7 +23,7 @@ namespace GameController.Audio
             _isPlaying = true;
             
             _temp.Play();
-            _temp.DOFade(volume, 0.3f);
+            _temp.DOFade(volume, fadeInDuration);
         }
 
         protected virtual void InitSound()
@@ -43,7 +46,7 @@ namespace GameController.Audio
             if(!_isPlaying)
                 return;
 
-            _temp.DOFade(0, 0.3f).OnComplete(Release);
+            _temp.DOFade(0, fadeOutDuration).OnComplete(Release);
         }
 
         protected virtual void Release()

@@ -6139,6 +6139,8 @@ MonoBehaviour:
   audioSourcePool: {fileID: 0}
   audioClip: {fileID: 8300000, guid: d435d056482f0c241b20d942607bb83b, type: 3}
   volume: 1
+  fadeInDuration: 0.3
+  fadeOutDuration: 0.3
 --- !u!1 &2476700730900018752
 GameObject:
   m_ObjectHideFlags: 0
