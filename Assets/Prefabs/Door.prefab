@@ -287,6 +287,7 @@ GameObject:
   - component: {fileID: 6995286192067482824}
   - component: {fileID: 2658278555467472160}
   - component: {fileID: 6054062621800415612}
+  - component: {fileID: 6072834264786547118}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Untagged
@@ -369,6 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   segmentMobility: {fileID: 0}
+  soundPlayer: {fileID: 6072834264786547118}
 --- !u!114 &6054062621800415612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,6 +385,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjects:
   - {fileID: 3911365437963056854}
+--- !u!114 &6072834264786547118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3911365437963056854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a34892078c48c7ae099fe459d4c5c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourcePool: {fileID: 0}
+  onSounds:
+  - {fileID: 8300000, guid: e748c90a8e08f8b47a474f257a22b237, type: 3}
+  offSounds: []
+  pitchOn: {x: 1.0175189, y: 1.0175189}
+  pitchOff: {x: 0.9, y: 1.1}
 --- !u!1 &6500938711054069559
 GameObject:
   m_ObjectHideFlags: 0

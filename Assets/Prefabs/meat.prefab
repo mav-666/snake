@@ -257,6 +257,7 @@ MonoBehaviour:
   audioSourcePool: {fileID: 0}
   onSounds:
   - {fileID: 8300000, guid: 98130ed98795e08489c54f4790c33fdb, type: 3}
+  - {fileID: 8300000, guid: 25093bf9512a90045a636418ec9a6f76, type: 3}
   offSounds: []
   pitchOn: {x: 0.9, y: 1.1}
   pitchOff: {x: 0.9, y: 1.1}

@@ -32,7 +32,7 @@ namespace Electricity.Couplers
             if(IsConnectedA || CanNotConnect)
                 return;
             
-            IsConnectedA = finderA.Find(out A) && A != B;
+            IsConnectedA = finderA.Find(out A) && !(A == B && IsConnectedB);
             
             if(IsConnectedA)
                 OnConnect?.Invoke(Order.A);
@@ -45,7 +45,7 @@ namespace Electricity.Couplers
             if(IsConnectedB || CanNotConnect)
                 return;
             
-            IsConnectedB = finderB.Find(out B) && B != A;
+            IsConnectedB = finderB.Find(out B) && !(B == A && IsConnectedA);
             
             if(IsConnectedB)
                 OnConnect?.Invoke(Order.B);
