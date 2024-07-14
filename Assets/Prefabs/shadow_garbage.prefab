@@ -8,10 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -196448700927504405, guid: 27fac93c6741e204d9121e9e0c7fd650, type: 3}
-      propertyPath: audioSourcePool
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2241623861474494578, guid: 27fac93c6741e204d9121e9e0c7fd650, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.7531514
@@ -70,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8693250399083838794, guid: 27fac93c6741e204d9121e9e0c7fd650, type: 3}
       propertyPath: m_Name
-      value: garbage_1 1
+      value: shadow_garbage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

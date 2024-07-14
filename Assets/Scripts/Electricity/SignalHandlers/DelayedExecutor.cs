@@ -15,7 +15,7 @@ namespace Electricity.SignalHandlers
         
         public override void ExecuteOn()
         {
-            if (order != Order.Off)
+            if (order == Order.Off)
             {
                 signalExecutor.ExecuteOn();
                 return;
@@ -27,7 +27,7 @@ namespace Electricity.SignalHandlers
 
         public override void ExecuteOff()
         {
-            if (order != Order.On)
+            if (order == Order.On)
             {
                 signalExecutor.ExecuteOff();
                 return;

@@ -29,9 +29,9 @@ namespace Snake
             _disconnect.performed += Disconnect;
         }
         
-        private void Connect(InputAction.CallbackContext ctx)
+        private void Connect(InputAction.CallbackContext _)
         {
-            if (ctx.interaction == null) _snakeConnection.FindUnconnected();
+            _snakeConnection.FindUnconnected();
         }
         
         private void Disconnect(InputAction.CallbackContext _)

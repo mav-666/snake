@@ -11,6 +11,8 @@ namespace GameController.Audio
         [SerializeField] private float fadeInDuration = 0.3f;
         [SerializeField] private float fadeOutDuration = 0.3f;
 
+        [SerializeField] private bool isMono;
+
         protected AudioSource _temp;
         private bool _isPlaying;
         
@@ -34,7 +36,10 @@ namespace GameController.Audio
             _temp.loop = true;
             _temp.clip = audioClip;
             _temp.time = Random.Range(0f, audioClip.length);
-            
+
+            if (isMono)
+                _temp.spatialBlend = 0;
+
             Transform trans;
             (trans = _temp.transform).SetParent(transform);
             trans.localPosition = Vector3.zero;
@@ -53,6 +58,10 @@ namespace GameController.Audio
         {
             _isPlaying = false;
             _temp.Stop();
+            
+            if(isMono)
+                _temp.spatialBlend = 1;
+            
             audioSourcePool.Release(_temp);
         }
     }

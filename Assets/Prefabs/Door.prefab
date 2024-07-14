@@ -286,8 +286,8 @@ GameObject:
   - component: {fileID: 2753060679000457813}
   - component: {fileID: 6995286192067482824}
   - component: {fileID: 2658278555467472160}
-  - component: {fileID: 6054062621800415612}
   - component: {fileID: 6072834264786547118}
+  - component: {fileID: 3009958738898077885}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Untagged
@@ -371,20 +371,6 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   segmentMobility: {fileID: 0}
   soundPlayer: {fileID: 6072834264786547118}
---- !u!114 &6054062621800415612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3911365437963056854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc401f34075c412eb5caa821b82275a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjects:
-  - {fileID: 3911365437963056854}
 --- !u!114 &6072834264786547118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,6 +389,20 @@ MonoBehaviour:
   offSounds: []
   pitchOn: {x: 1.0175189, y: 1.0175189}
   pitchOff: {x: 0.9, y: 1.1}
+--- !u!114 &3009958738898077885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3911365437963056854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc401f34075c412eb5caa821b82275a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjects:
+  - {fileID: 3911365437963056854}
 --- !u!1 &6500938711054069559
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,8 +794,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a936bf88cc0e4e28bfc1837daf94bb33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signalExecutor: {fileID: 6054062621800415612}
-  delay: 1
+  signalExecutor: {fileID: 3009958738898077885}
+  delay: 1.2
   order: 2
 --- !u!114 &4222329937735896948
 MonoBehaviour:

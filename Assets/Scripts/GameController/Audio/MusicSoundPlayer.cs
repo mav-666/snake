@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 
 namespace GameController.Audio
@@ -39,7 +38,6 @@ namespace GameController.Audio
         protected override void InitSound()
         {
             base.InitSound();
-            _temp.spatialBlend = 0;
             _initialGroup = _temp.outputAudioMixerGroup;
             _temp.outputAudioMixerGroup = audioMixerGroup;
         }
@@ -47,13 +45,7 @@ namespace GameController.Audio
         protected override void Release()
         {
             _temp.outputAudioMixerGroup = _initialGroup;
-            _temp.spatialBlend = 1;
             base.Release();
-        }
-
-        private void OnDisable()
-        {
-            _isPlaying = false;
         }
     }
 }

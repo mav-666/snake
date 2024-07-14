@@ -62,8 +62,8 @@ namespace Snake
         {
             segment.CanNotMove = true;
             Freeze(rigid);
-            rigid.DOMove(electric.transform.position, animationDuration)
-                .OnComplete(() => Freeze(rigid)).SetUpdate(UpdateType.Fixed);
+            rigid.DOKill();
+            rigid.DOMove(electric.transform.position, animationDuration).SetUpdate(UpdateType.Fixed);
         }
 
         private void Freeze(Rigidbody2D rigid)

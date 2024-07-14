@@ -373,6 +373,7 @@ MonoBehaviour:
   volume: 0.025
   fadeInDuration: 15
   fadeOutDuration: 0.3
+  isMono: 1
   audioMixerGroup: {fileID: -7205919033855410022, guid: 8264a69bd61c5ce4ca52f013243cb6fa, type: 2}
 --- !u!114 &2232198387503700224
 MonoBehaviour:
