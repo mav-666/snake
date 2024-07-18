@@ -50,6 +50,7 @@ MonoBehaviour:
   volume: 1
   fadeInDuration: 0.3
   fadeOutDuration: 0.3
+  isMono: 0
 --- !u!114 &2672810380882297628
 MonoBehaviour:
   m_ObjectHideFlags: 0

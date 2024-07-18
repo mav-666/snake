@@ -47,7 +47,7 @@ namespace Snake
             base.FindA();
             
             if(IsConnectedA)
-                MoveAnimationFor(_head,_headRigid, A);
+                MoveHeadAnimation();
         }
 
         public override void FindB()
@@ -58,6 +58,11 @@ namespace Snake
                 MoveAnimationFor(_tale,_taleRigid, B);
         }
 
+        private void MoveHeadAnimation()
+        {
+            MoveAnimationFor(_head,_headRigid, A);
+        }
+        
         private void MoveAnimationFor(IMobility segment, Rigidbody2D rigid, Electric electric)
         {
             segment.CanNotMove = true;

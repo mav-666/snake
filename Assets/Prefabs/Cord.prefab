@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1408783612788702763}
   m_Layer: 8
   m_Name: Cord
-  m_TagString: Untagged
+  m_TagString: Cord
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,8 +82,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.26, y: -0.02}
-  m_Radius: 0.5
+  m_Offset: {x: 0.07, y: -0.02}
+  m_Radius: 0.55
 --- !u!1 &6875701149852942573
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +159,7 @@ SpriteRenderer:
   m_SortingLayerID: -915734689
   m_SortingLayer: -1
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: 07b308674a822c44c83a65a5530f3693, type: 3}
+  m_Sprite: {fileID: -4586684664792841527, guid: 8b904e8e5490bf043b6508f90f3809e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

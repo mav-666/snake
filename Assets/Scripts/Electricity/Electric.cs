@@ -12,7 +12,7 @@ namespace Electricity
     public class Electric : MonoBehaviour
     { 
         [SerializeField, HideInInspector] private SignalHandler _signalHandler;
-        private List<Coupler> _couplers;
+        protected List<Coupler> _couplers;
 
         [SerializeField, HideInInspector] private bool _hasSignalHandler;
 

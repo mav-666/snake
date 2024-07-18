@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 1462691004076440055}
   - component: {fileID: 2202639533046752328}
   - component: {fileID: 3442611372897817994}
+  - component: {fileID: 7334218387390857502}
   m_Layer: 0
   m_Name: DeathSystem
   m_TagString: Untagged
@@ -175,7 +176,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7476745220457352531}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6381d24d7ddb44c28190643a59ea37a9, type: 3}
   m_Name: 
@@ -208,3 +209,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundPlayer: {fileID: 9195170598655901844}
+--- !u!114 &7334218387390857502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7476745220457352531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5ada9e7c2c4c3d92efd6a9e43ec9b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 0}
