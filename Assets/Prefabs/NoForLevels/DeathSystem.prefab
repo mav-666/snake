@@ -49,6 +49,7 @@ MonoBehaviour:
   volume: 0.25
   fadeInDuration: 0.3
   fadeOutDuration: 0.3
+  audioMixerGroup: {fileID: -7205919033855410022, guid: 8264a69bd61c5ce4ca52f013243cb6fa, type: 2}
   isMono: 1
 --- !u!1 &7476745220457352531
 GameObject:

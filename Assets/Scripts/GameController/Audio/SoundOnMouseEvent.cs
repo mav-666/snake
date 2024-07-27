@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace GameController.Audio
 {
     [RequireComponent(typeof(SoundPlayer))]
-    public class SoundOnMouseEvent : MonoBehaviour
+    public class SoundOnMouseEvent : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         private SoundPlayer _soundPlayer;
 
@@ -11,13 +12,13 @@ namespace GameController.Audio
         {
             _soundPlayer = GetComponent<SoundPlayer>();
         }
-
-        private void OnMouseDown()
+        
+        public void OnPointerDown(PointerEventData eventData)
         {
             _soundPlayer.On();
         }
 
-        private void OnMouseUp()
+        public void OnPointerUp(PointerEventData eventData)
         {
             _soundPlayer.Off();
         }

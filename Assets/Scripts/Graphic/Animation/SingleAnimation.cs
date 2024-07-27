@@ -11,7 +11,7 @@ namespace Graphic.Animation
 
         public override void Init()
         {
-            Animation = CreateAnimation(duration).Pause().SetEase(ease).SetRelative().SetAutoKill(false);
+            Animation = CreateAnimation(duration).Pause().SetEase(ease).SetAutoKill(false);
         }
 
         protected abstract Tween CreateAnimation(float duration);

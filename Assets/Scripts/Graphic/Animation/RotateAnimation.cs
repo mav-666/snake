@@ -7,15 +7,16 @@ namespace Graphic.Animation
     {
         [SerializeField] private float angleStart;
         [SerializeField] private float angleEnd;
-
-        private void Start()
+        
+        public override void Init()
         {
-            transform.rotation = Quaternion.Euler(0,0,angleStart);
+            base.Init();
+            transform.localRotation = Quaternion.Euler(0,0,angleStart);
         }
 
         protected override Tween CreateAnimation(float duration)
         {
-            return transform.DOLocalRotate(new Vector3(0,0, angleEnd), duration).From(new Vector3(0,0,angleStart));
+            return transform.DOLocalRotate(new Vector3(0,0, angleEnd), duration).From(new Vector3(0,0,angleStart)).SetRelative();
         }
     }
 }

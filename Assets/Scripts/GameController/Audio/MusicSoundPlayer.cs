@@ -1,25 +1,14 @@
 ﻿using UnityEngine;
-using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 namespace GameController.Audio
 {
     public class MusicSoundPlayer : LoopSoundPlayer
     {
+        [SerializeField] private LevelMusic levelMusic;
+        
         private static bool _isPlaying;
         
-        [SerializeField] private AudioMixerGroup audioMixerGroup;
-
-        private AudioMixerGroup _initialGroup;
-
-        private void Awake()
-        {
-            if(_isPlaying)
-                return;
-            
-            transform.SetParent(transform.root.parent);
-            DontDestroyOnLoad(this);
-        }
-
         public override void On()
         {
             if(_isPlaying)
@@ -34,18 +23,38 @@ namespace GameController.Audio
             _isPlaying = false;
             base.Off();
         }
-
-        protected override void InitSound()
-        {
-            base.InitSound();
-            _initialGroup = _temp.outputAudioMixerGroup;
-            _temp.outputAudioMixerGroup = audioMixerGroup;
-        }
-
+        
         protected override void Release()
         {
-            _temp.outputAudioMixerGroup = _initialGroup;
             base.Release();
+            Destroy(gameObject);
+        }
+
+        private void OnEnable()
+        {
+            SceneManager.sceneLoaded += InitMusicByScene;
+        }
+        
+        private void OnDisable()
+        {
+            SceneManager.sceneLoaded -= InitMusicByScene;
+        }
+
+        private void InitMusicByScene(Scene scene, LoadSceneMode mode)
+        {
+            if (_isPlaying == false)
+                InitMusic();    
+            else if(_temp.clip != levelMusic.GetMusicBy(scene.buildIndex))
+                Off();
+            else
+                Destroy(gameObject);
+        }
+
+        private void InitMusic()
+        {
+            audioClip = levelMusic.GetMusicBy(SceneManager.GetActiveScene().buildIndex);
+            transform.SetParent(transform.root.parent);
+            DontDestroyOnLoad(this);
         }
     }
 }

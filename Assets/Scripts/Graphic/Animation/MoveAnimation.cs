@@ -15,7 +15,7 @@ namespace Graphic.Animation
 
         protected override Tween CreateAnimation(float duration)
         {
-            return transform.DOLocalMove(relativePoint, duration);
+            return transform.DOLocalMove(relativePoint, duration).SetRelative();
         }
     }
 }

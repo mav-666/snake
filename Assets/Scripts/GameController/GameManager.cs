@@ -9,15 +9,22 @@ namespace GameController
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private TweenAnimation transition;
-
+        [SerializeField] private LevelIndexBorders levelIndexBorders;
         private CheckpointHandler _checkpointHandler;
-
         private bool _hasCheckpoints;
-    
+
+        public int FirstLevelIndex => levelIndexBorders.firstLevelIndex;
+        public int LastLevelIndex => levelIndexBorders.lastLevelIndex;
+        
+        public int CompletedLevel { get; private set; }
+        
+        private const string CompletedLevelPref = "CompletedLevel";
+        
         private void Awake()
         {
             _hasCheckpoints = TryGetComponent( out _checkpointHandler);
             transition.gameObject.SetActive(true);
+            CompletedLevel = PlayerPrefs.GetInt(CompletedLevelPref, FirstLevelIndex-1);
         }
 
         private void Start()
@@ -54,9 +61,13 @@ namespace GameController
             DOTween.KillAll();
         
             var current = SceneManager.GetActiveScene().buildIndex;
-            Debug.Log($"Switched to the next scene {current}");
+            
+            if(current > CompletedLevel)
+                PlayerPrefs.SetInt(CompletedLevelPref, current);
+            
             if (SceneManager.sceneCountInBuildSettings <= ++current)
                 current = 0;
+            
             SceneManager.LoadScene(current);
         }
 
@@ -69,7 +80,6 @@ namespace GameController
         {
             DOTween.KillAll();
             
-            Debug.Log($"Switched to the next scene {index}");
             if (SceneManager.sceneCountInBuildSettings <= index)
                 index = 0;
             SceneManager.LoadScene(index);

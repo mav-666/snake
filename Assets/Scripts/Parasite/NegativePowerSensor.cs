@@ -4,17 +4,17 @@
     {
         public override void PowerUp()
         {
-            powerLevel--;
+            powerLevel++;
         }
 
         public override void PowerDown()
         {
-            powerLevel++;
+            powerLevel--;
         }
 
         protected override bool CheckRequiredPowerLevel()
         {
-            return powerLevel < 0;
+            return powerLevel <= 0;
         }
     }
 }

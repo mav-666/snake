@@ -16,6 +16,9 @@ namespace GameController.Audio
 
         public override void On()
         {
+            if(onSounds.Length == 0)
+                return;
+            
             _temp = audioSourcePool.Get();
       
             InitSound(true);
@@ -26,6 +29,9 @@ namespace GameController.Audio
 
         public override void Off()
         {
+            if(offSounds.Length == 0)
+                return;
+
             _temp = audioSourcePool.Get();
             
             InitSound(false);

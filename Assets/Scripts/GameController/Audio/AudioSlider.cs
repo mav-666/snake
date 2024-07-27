@@ -14,7 +14,7 @@ namespace GameController.Audio
         
         private void Awake()
         {
-            _slider.GetComponent<Slider>();
+            _slider = GetComponent<Slider>();
         }
 
         private void Start()

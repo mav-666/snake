@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa464299c2bb2747bff946614d7038e, type: 3}
+  m_Name: Level Music
+  m_EditorClassIdentifier: 
+  indexMusic:
+  - sceneIndex: 0
+    music: {fileID: 8300000, guid: 103cd82b4197b2b48b130fdfa00cf2f7, type: 3}
+  - sceneIndex: 1
+    music: {fileID: 8300000, guid: 12f2c88ec6241b44ca2a72662f73590f, type: 3}
+  defaultMusic: {fileID: 8300000, guid: 103cd82b4197b2b48b130fdfa00cf2f7, type: 3}
