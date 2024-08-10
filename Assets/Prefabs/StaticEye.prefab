@@ -147,9 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4376c423e05647d89ba788e8d6f6c2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 7370990953591957014}
   light2d: {fileID: 3534933065735941809}
   duration: 0.3
-  animator: {fileID: 7370990953591957014}
 --- !u!114 &3534933065735941809 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1294771578344284825, guid: c5c1e3c7486e7a24f91d142063cefe42, type: 3}

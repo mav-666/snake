@@ -30,19 +30,5 @@ namespace Electricity
             
             return true;
         }
-        
-        private void OnDrawGizmosSelected()
-        {
-            
-            Gizmos.color = Color.green;
-            foreach (var cord in GameObject.FindGameObjectsWithTag("Cord"))
-            {
-                
-                if(Vector3.Distance(cord.transform.position, transform.position) > Transmitter.ConnectingDistance)
-                    continue;
-                
-                Gizmos.DrawLine(transform.position, cord.transform.position);
-            }
-        }
     }
 }

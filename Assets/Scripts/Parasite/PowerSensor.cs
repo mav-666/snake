@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Parasite
 {
-    public abstract class PowerSensor : SensorHandler
+    public abstract class PowerSensor : MonoBehaviour
     {
         [SerializeField] protected int powerLevel;
         
@@ -32,11 +32,6 @@ namespace Parasite
         private void Update()
         {
             UpdatePowerLevel();
-            
-            if(_hasRequiredPower && _sensor.Check(out _))
-                FoundTarget();
-            else
-                LostTarget();
         }
 
 

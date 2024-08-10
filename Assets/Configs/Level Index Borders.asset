@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Level Index Borders
   m_EditorClassIdentifier: 
   firstLevelIndex: 1
-  lastLevelIndex: 7
+  lastLevelIndex: 10

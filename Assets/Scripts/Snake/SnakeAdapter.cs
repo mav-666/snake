@@ -35,7 +35,7 @@ namespace Snake
             CalcDrag(direction);
             
             _headMobility.CanNotMove =  CanNotMove || _findingCoupler.IsConnectedA;
-            _taleMobility.CanNotMove = CanNotMove || _findingCoupler.IsConnectedB;
+            _taleMobility.CanNotMove = CanNotMove || _findingCoupler.IsConnectedB || !_headMobility.CanNotMove;
             
             if (!_headMobility.CanNotMove)
                 _headMobility.MoveBy(direction);

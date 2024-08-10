@@ -25,11 +25,7 @@ namespace GameController.Audio
             
             foreach (var pair in indexMusic)
                 if (sceneIndex >= pair.SceneIndex)
-                {
                     music = pair.Music;
-                    Debug.Log(sceneIndex + " " + pair.Music.name);
-                }
-                   
 
             return music;
         }

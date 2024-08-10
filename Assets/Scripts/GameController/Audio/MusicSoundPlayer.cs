@@ -9,18 +9,22 @@ namespace GameController.Audio
         
         private static bool _isPlaying;
         
+        private bool _isOn;
+        
         public override void On()
         {
             if(_isPlaying)
                 return;
             
             _isPlaying = true;
+            _isOn = true;
             base.On();
         }
 
         public override void Off()
         {
             _isPlaying = false;
+            _isOn = false;
             base.Off();
         }
         
@@ -44,9 +48,9 @@ namespace GameController.Audio
         {
             if (_isPlaying == false)
                 InitMusic();    
-            else if(_temp.clip != levelMusic.GetMusicBy(scene.buildIndex))
+            else if(_isOn && _temp.clip != levelMusic.GetMusicBy(scene.buildIndex))
                 Off();
-            else
+            else if(!_isOn)
                 Destroy(gameObject);
         }
 

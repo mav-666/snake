@@ -8,13 +8,12 @@ namespace Parasite
     {
         [SerializeField] private TweenAnimation anim;
         
-
         private void Start()
         {
             anim.Animation.SetLoops(-1, LoopType.Yoyo);
         }
 
-        protected override void Open()
+        public override void Open()
         {
             base.Open();
             anim.Animation.Play();

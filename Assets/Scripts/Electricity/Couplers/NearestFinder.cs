@@ -8,16 +8,20 @@ namespace Electricity.Couplers
     {
         private ConeSensor _sensor;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             _sensor = GetComponent<ConeSensor>();
         }
         
-        public override bool Find(out Electric found)
+        public override bool Find(out Connectable found)
         {
             var hasFound = _sensor.Check(out var target);
-            
-            found = hasFound ? target.GetComponent<Electric>() : null;
+
+            if (hasFound)
+                FindInCache(target, out found);
+            else
+                found = null;
             
             return hasFound;
         }

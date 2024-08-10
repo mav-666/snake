@@ -24,12 +24,9 @@ namespace GameController.UI
 
         private void Awake()
         {
-
-            
-            
             var completedLevel = gameManager.CompletedLevel;
 
-            for (var i = gameManager.FirstLevelIndex; i < Math.Min(gameManager.LastLevelIndex, SceneManager.sceneCountInBuildSettings - 1); i++)
+            for (var i = gameManager.FirstLevelIndex; i <= Math.Min(gameManager.LastLevelIndex, SceneManager.sceneCountInBuildSettings - 1); i++)
             {
                 var sceneName = Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i));
                 CreateLevel(levels.First(level => level.SceneName == sceneName).Preview, i, i <= completedLevel + 1);

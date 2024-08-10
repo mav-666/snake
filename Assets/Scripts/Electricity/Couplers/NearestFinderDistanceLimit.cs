@@ -7,7 +7,7 @@ namespace Electricity.Couplers
         [SerializeField] private Transform target;
         [SerializeField] private float distanceLimit;
 
-        public override bool Find(out Electric found)
+        public override bool Find(out Connectable found)
         {
             return base.Find(out found) && CheckDistanceOf(found.transform);
         }

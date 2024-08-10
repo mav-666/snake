@@ -1,55 +1,84 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 namespace Parasite
 {
-    [RequireComponent(typeof(PowerSensor))]
-    public class ParasiteEye : MonoBehaviour
+    [RequireComponent(typeof(ConeSensor))]
+    public class ParasiteEye : OpeningEye
     {
         [SerializeField] private Light2D light2d;
         [SerializeField] private float duration;
-        [SerializeField] private Animator animator;
 
-        private PowerSensor _powerSensor;
+        private bool _hasTarget;
         
+        public event Action<bool> OnObserve;
+        
+        private ConeSensor _coneSensor;
         private Color _lightColor;
         private Tween _temp;
+        private bool _isOpen;
 
+
+        public event Action OnClose;
+        
         private void Awake()
         {
-            _powerSensor = GetComponent<PowerSensor>();
             _lightColor = light2d.color;
-        }
-        
-        private void OnEnable()
-        {
-            _powerSensor.OnPowerLevelAchieve += Open;
-            _powerSensor.OnPowerLevelLose += Close;
-        }
-        
-        private void OnDisable()
-        {
-            _powerSensor.OnPowerLevelAchieve -= Open;
-            _powerSensor.OnPowerLevelLose -= Close;
+            _coneSensor = GetComponent<ConeSensor>();
         }
 
-        protected virtual void Open()
+        public override void Open()
         {
             _temp?.Kill();
             light2d.enabled = true;
+            _isOpen = true;
             _temp = DOVirtual.Color(light2d.color, _lightColor, duration,
                 value => light2d.color = value).SetEase(Ease.Linear);
-            animator.SetTrigger("trOpen");
+            base.Open();
+            
         }
 
-        public virtual void Close()
+        public override void Close()
         {
             _temp?.Kill();
+            _isOpen = false;
             _temp = DOVirtual.Color(light2d.color, Color.clear, duration,
-                value => light2d.color = value).OnComplete(() => light2d.enabled = false).SetEase(Ease.Linear);
-            animator.SetTrigger("trClose");
+                value => light2d.color = value).OnComplete(CloseComplete).SetEase(Ease.Linear);
+            base.Close();
+        }
+        
+        private void CloseComplete()
+        {
+            light2d.enabled = false;
+            OnClose?.Invoke();
+        }
+        
+        private void Update()
+        {
+            if(_isOpen && _coneSensor.Check(out _))
+                FoundTarget();
+            else
+                LostTarget();
         }
 
+        private void FoundTarget()
+        {
+            if(_hasTarget)
+                return;
+
+            _hasTarget = true;
+            OnObserve?.Invoke(true);
+        }
+
+        private void LostTarget()
+        {
+            if (!_hasTarget)
+                return;
+            
+            _hasTarget = false;
+            OnObserve?.Invoke(false);
+        }
     }
 }

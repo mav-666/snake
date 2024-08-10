@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using Graphic.Animation;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace GameController.UI
@@ -29,7 +31,7 @@ namespace GameController.UI
         {
             preview.color = Color.HSVToRGB(0, 0, 0.5f);
             notAvailable.gameObject.SetActive(true);
-            GetComponent<AnimationOnMouseOver>().enabled = false;
+            GetComponent<TweenAnimation>().Animation.Kill();
         }
         
         private void Start()

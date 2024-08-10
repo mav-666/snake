@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 979595671034064392}
   - component: {fileID: 4912394669775565626}
+  - component: {fileID: 168433223473389901}
   m_Layer: 8
   m_Name: GFX
   m_TagString: Untagged
@@ -86,6 +87,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &168433223473389901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316587111958008074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0be915de754c438341863f99354b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initOnAwake: 1
+  duration: 0.1
+  ease: 4
+  endAlpha: 3.5
+  sprite: {fileID: 4912394669775565626}
 --- !u!1 &5098969468307302108
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,6 +115,7 @@ GameObject:
   - component: {fileID: 156218942757752819}
   - component: {fileID: 2428120907477175285}
   - component: {fileID: 5553964047699796308}
+  - component: {fileID: 6872594396024033382}
   m_Layer: 8
   m_Name: CenterCord
   m_TagString: Cord
@@ -170,3 +189,16 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.83
+--- !u!114 &6872594396024033382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5098969468307302108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb08547668248c1856e0d62be19e29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenAnimation: {fileID: 168433223473389901}

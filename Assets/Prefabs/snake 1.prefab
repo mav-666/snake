@@ -5292,6 +5292,7 @@ GameObject:
   - component: {fileID: 948032246593794978}
   - component: {fileID: 8180753713283835879}
   - component: {fileID: 5673293296030968784}
+  - component: {fileID: 8530993127606643011}
   m_Layer: 6
   m_Name: tale
   m_TagString: Tale
@@ -5474,6 +5475,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b9106cf5585a9224db34e0c2c582c3b8, type: 3}
   pitchOn: {x: 0.97729445, y: 1.1}
   pitchOff: {x: 0.86564696, y: 0.9883526}
+--- !u!114 &8530993127606643011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173835146191997043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 226f4f1a56f748b6a185d060122924ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1259185828857145542
 GameObject:
   m_ObjectHideFlags: 0
@@ -7465,6 +7478,7 @@ GameObject:
   - component: {fileID: 6824847177082446486}
   - component: {fileID: 5944848869414011370}
   - component: {fileID: 7152626525004523169}
+  - component: {fileID: 8552687285521740919}
   m_Layer: 6
   m_Name: head
   m_TagString: Untagged
@@ -7621,6 +7635,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b9106cf5585a9224db34e0c2c582c3b8, type: 3}
   pitchOn: {x: 0.96991503, y: 1.1}
   pitchOff: {x: 0.859647, y: 1.007211}
+--- !u!114 &8552687285521740919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4582790705448019518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 226f4f1a56f748b6a185d060122924ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4592619861535457893
 GameObject:
   m_ObjectHideFlags: 0

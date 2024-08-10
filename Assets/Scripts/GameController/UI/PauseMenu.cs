@@ -13,6 +13,7 @@ namespace GameController.UI
         [SerializeField] private InputActionReference actionReference;
         [SerializeField] private InputActionAsset actions;
         [SerializeField] private TweenAnimation tweenAnimation;
+        [SerializeField] private GameObject panel;
 
         private InputActionMap _playerMap;
         private bool _isPaused;
@@ -52,6 +53,7 @@ namespace GameController.UI
         {
             _isPaused = true;
             _playerMap.Disable();
+            panel.SetActive(true);
             
             tweenAnimation.Animation.OnComplete(() => SetTimeScale(0)).PlayForward();
         }
@@ -65,7 +67,13 @@ namespace GameController.UI
         {
             _isPaused = false;
             SetTimeScale(1);
-            tweenAnimation.Animation.OnRewind(_playerMap.Enable).PlayBackwards();
+            
+            
+            tweenAnimation.Animation.OnRewind(() =>
+            {
+                _playerMap.Enable();
+                panel.SetActive(false);
+            }).PlayBackwards();
         }
     }
 }

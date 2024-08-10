@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using Electricity;
 using GameController;
 using UnityEngine;
@@ -7,7 +7,7 @@ namespace Parasite.ObserveTimer
 {
     public class ObserveTimer : MonoBehaviour
     {
-        [SerializeField] private SensorHandler[] sensors;
+        [SerializeField] private ParasiteEye[] sensors;
 
         [SerializeField] private float timespan;
         
@@ -17,7 +17,7 @@ namespace Parasite.ObserveTimer
         
         private BiTimer _timer;
         private int _activeSensorsCount;
-
+        
         private void OnEnable()
         {
             foreach (var sensor in sensors)

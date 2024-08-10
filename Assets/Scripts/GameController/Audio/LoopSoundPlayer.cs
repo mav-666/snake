@@ -34,7 +34,7 @@ namespace GameController.Audio
             _temp.DOFade(volume, fadeInDuration);
         }
 
-        protected virtual void InitSound()
+        private void InitSound()
         {
             _temp = audioSourcePool.Get();
             _temp.volume = 0;

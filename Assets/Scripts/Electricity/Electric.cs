@@ -22,6 +22,13 @@ namespace Electricity
             _hasSignalHandler = TryGetComponent(out _signalHandler);
             EditorUtility.SetDirty(this);
         }
+
+        [ContextMenu("receiveSignal")]
+        private void ReceiveSignalTest()
+        {
+            if(_hasSignalHandler)
+                _signalHandler.ReceiveSignal();
+        }
 #endif
 
         protected virtual void Awake()

@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace GameController.UI
 {
-    public class ScrollItems : MonoBehaviour
+    public class ScrollItems : Selectable
     {
         [SerializeField] private Scrollbar scrollbar;
         [SerializeField] private Transform content;
@@ -12,12 +13,12 @@ namespace GameController.UI
         private float[] _targets;
         private Selectable[] _selectables;
 
-        private int _currentIndex;
+        [SerializeField] private int _currentIndex;
         private float _currentTarget;
         
-
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             _selectables = GetComponentsInChildren<Selectable>();
 
             _targets =  new float[content.transform.childCount];
@@ -27,8 +28,7 @@ namespace GameController.UI
                 _targets[i] = distance * i;
             
             scrollbar.value = 0;
-            
-            EnableCurrent();
+            SelectCurrent();
         }
 
         public void Next()
@@ -36,9 +36,8 @@ namespace GameController.UI
             if (_currentIndex + 1 >= _targets.Length)
                 return;
             
-            DisableCurrent();
             _currentTarget = _targets[++_currentIndex];
-            EnableCurrent();
+            SelectCurrent();
         }
 
         public void Previous()
@@ -46,26 +45,23 @@ namespace GameController.UI
             if (_currentIndex - 1 <= -1)
                 return;
             
-            DisableCurrent();
             _currentTarget = _targets[--_currentIndex];
-            EnableCurrent();
+            SelectCurrent();
         }
 
-        private void DisableCurrent()
+        public override void OnSelect(BaseEventData eventData)
         {
-            _selectables[_currentIndex].interactable = false;
+            SelectCurrent();
         }
-        
-        private void EnableCurrent()
+
+        private void SelectCurrent()
         {
-            _selectables[_currentIndex].interactable = true;
+            _selectables[_currentIndex+1].Select();
         }
         
         private void Update()
         {
             scrollbar.value = Mathf.Lerp(scrollbar.value, _currentTarget, lerp);
         }
-
-        
     }
 }
