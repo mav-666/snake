@@ -1,10 +1,15 @@
 ![image](https://github.com/user-attachments/assets/dc321ba8-7fd1-4415-8b5d-7ebf781030ec)
 
+PLay it on itch.io
+https://mav-666.itch.io/wire-up
+---
+
 Wire up is a puzzle game that consists of 10 levels that require your wit, dedication to be completed. 
 
 In this game you will play as a snake or a "wiggling wire" that has it's journey though a recycling station that has been polluted with an unknown mass of meat.
 
 Controls:
+---
 - WASD | Arrow keys – Move around
 - Space | Z – Connect to a wire
 - Shift | X – Disconnect from a wire
